@@ -9,8 +9,10 @@ public class CameraRotator : MonoBehaviour
 
     [Header("Camera Attributes")]
     public Animator animator;
+    public float dampenTime = 5;
 
     private bool rotate = false;
+    private bool animationComplete = false;
 
     private void Start()
     {
@@ -21,9 +23,13 @@ public class CameraRotator : MonoBehaviour
     {
         yield return new WaitForSeconds(1.99f);
         rotate = true;
+
         yield return new WaitForSeconds(rotationTime);
         rotate = false;
-        gameObject.transform.rotation = Quaternion.Euler(Vector3.zero);
+        animationComplete = true;
+        
+        yield return new WaitForSeconds(0.99f);
+        animationComplete = false;
         animator.SetBool("ZoomIn", true);
     }
 
@@ -32,5 +38,12 @@ public class CameraRotator : MonoBehaviour
     {
         if (rotate)
             gameObject.transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
+
+        if (animationComplete)
+            gameObject.transform.rotation = Quaternion.Slerp(
+                gameObject.transform.rotation,
+                Quaternion.Euler(Vector3.zero),
+                dampenTime * Time.deltaTime
+                );
     }
 }

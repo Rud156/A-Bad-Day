@@ -9117,6 +9117,7 @@ MonoBehaviour:
   rotationSpeed: 40
   rotationTime: 8.75
   animator: {fileID: 738662526}
+  dampenTime: 5
 --- !u!1 &420045184
 GameObject:
   m_ObjectHideFlags: 0
@@ -43759,7 +43760,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2059156578}
   m_Layer: 0
-  m_Name: Center
+  m_Name: TestCastle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
