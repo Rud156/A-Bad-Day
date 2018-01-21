@@ -21,7 +21,7 @@ public class CameraRotator : MonoBehaviour
 
     private IEnumerator StartRotation()
     {
-        yield return new WaitForSeconds(1.99f);
+        yield return new WaitForSeconds(3.99f);
         rotate = true;
 
         yield return new WaitForSeconds(rotationTime);
