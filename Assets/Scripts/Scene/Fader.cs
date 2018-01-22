@@ -20,7 +20,7 @@ public class Fader : MonoBehaviour
     private float currentReductionRate;
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         currentReductionRate = 0;
         cameraRotator.enabled = false;
