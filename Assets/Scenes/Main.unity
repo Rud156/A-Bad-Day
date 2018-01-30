@@ -3054,6 +3054,90 @@ Transform:
   m_PrefabParentObject: {fileID: 4615215222297568, guid: a742b2a5e97166e4c80f04c575d71116,
     type: 2}
   m_PrefabInternal: {fileID: 202818601}
+--- !u!1001 &203632092
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1171558272}
+    m_Modifications:
+    - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.050000016
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.025000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939851408599548, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
+      propertyPath: m_Name
+      value: Princess
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &203632093 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1939851408599548, guid: 54db2af3af1ae384a945f1a789430852,
+    type: 2}
+  m_PrefabInternal: {fileID: 203632092}
+--- !u!4 &203632094 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852,
+    type: 2}
+  m_PrefabInternal: {fileID: 203632092}
+--- !u!114 &203632095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203632093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90a89ed7f05b1b642b74e7606c76cf3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0.3
+  jumpAboveHeight: 1
+  maxJumpCount: 1
+  dropParticles: {fileID: 1734460532577352, guid: 3124fa1ed6be0c046a3a49b2b8e673ed,
+    type: 2}
 --- !u!1 &210252127
 GameObject:
   m_ObjectHideFlags: 0
@@ -3361,6 +3445,7 @@ GameObject:
   - component: {fileID: 248761547}
   - component: {fileID: 248761549}
   - component: {fileID: 248761548}
+  - component: {fileID: 248761550}
   m_Layer: 5
   m_Name: Dialogue Panel
   m_TagString: Untagged
@@ -3422,6 +3507,58 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 248761546}
+--- !u!114 &248761550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 248761546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 248761548}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 203632095}
+        m_MethodName: ResetAndPlayJump
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &255479272
 GameObject:
   m_ObjectHideFlags: 0
@@ -10185,7 +10322,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 35
   orthographic: 0
   orthographic size: 68.11
   m_Depth: -1
@@ -16960,6 +17097,7 @@ Transform:
   m_Children:
   - {fileID: 101516102}
   - {fileID: 1729225730}
+  - {fileID: 203632094}
   m_Father: {fileID: 2059156578}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -22566,16 +22704,21 @@ Prefab:
     - target: {fileID: 198152464144274352, guid: a38c4cac76a51c140b0031203e139b77,
         type: 2}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 50
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 198152464144274352, guid: a38c4cac76a51c140b0031203e139b77,
         type: 2}
       propertyPath: randomSeed
-      value: 460762886
+      value: -275206674
       objectReference: {fileID: 0}
     - target: {fileID: 1389435438699784, guid: a38c4cac76a51c140b0031203e139b77, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198152464144274352, guid: a38c4cac76a51c140b0031203e139b77,
+        type: 2}
+      propertyPath: InitialModule.maxNumParticles
+      value: 10000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a38c4cac76a51c140b0031203e139b77, type: 2}
@@ -25427,7 +25570,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
       propertyPath: m_LocalPosition.y
@@ -25469,6 +25612,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 1939851408599548, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
+      propertyPath: m_Name
+      value: King
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
   m_IsPrefabParent: 0
@@ -25491,7 +25638,8 @@ MonoBehaviour:
   moveSpeed: 0.3
   jumpAboveHeight: 1
   maxJumpCount: 1
-  touchParticles: {fileID: 0}
+  dropParticles: {fileID: 1734460532577352, guid: 3124fa1ed6be0c046a3a49b2b8e673ed,
+    type: 2}
 --- !u!4 &1729225730 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852,
@@ -27236,9 +27384,13 @@ MonoBehaviour:
   nameText: {fileID: 2089371212}
   dialogueText: {fileID: 80347688}
   objectImage: {fileID: 1093883484}
-  dialogues:
-  - {fileID: 11400000, guid: f870eaa99ffeddc44b69f25f35cfe27b, type: 2}
-  - {fileID: 11400000, guid: 34b2c26f85d8f5d469ecb45a0077264e, type: 2}
+  dialogueObjects:
+  - dialogue: {fileID: 11400000, guid: edf478700b7903a45bb5c50db0f607dc, type: 2}
+    dialogueSpeaker: {fileID: 0}
+  - dialogue: {fileID: 11400000, guid: f870eaa99ffeddc44b69f25f35cfe27b, type: 2}
+    dialogueSpeaker: {fileID: 203632093}
+  - dialogue: {fileID: 11400000, guid: 34b2c26f85d8f5d469ecb45a0077264e, type: 2}
+    dialogueSpeaker: {fileID: 1729225725}
   waitTimeAfterDialogue: 2
 --- !u!1 &1872778150
 GameObject:

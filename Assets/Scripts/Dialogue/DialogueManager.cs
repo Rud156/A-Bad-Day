@@ -6,13 +6,20 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    [System.Serializable]
+    public struct DialogueObject
+    {
+        public Dialogue dialogue;
+        public GameObject dialogueSpeaker;
+    }
+
     [Header("Required Components")]
     public Text nameText;
     public Text dialogueText;
     public RawImage objectImage;
 
     [Header("Dialogue Data")]
-    public Dialogue[] dialogues;
+    public DialogueObject[] dialogueObjects;
     public float waitTimeAfterDialogue = 2;
 
 
@@ -26,14 +33,18 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator StartDialogue()
     {
-        foreach (Dialogue dialogue in dialogues)
+        foreach (DialogueObject dialogueObject in dialogueObjects)
         {
-            nameText.text = dialogue.name;
-            nameText.color = dialogue.nameColor;
-            objectImage.texture = dialogue.spriteImage;
-            objectImage.color = dialogue.nameColor;
+            nameText.text = dialogueObject.dialogue.name;
+            nameText.color = dialogueObject.dialogue.nameColor;
 
-            foreach (string line in dialogue.sentences)
+            objectImage.texture = dialogueObject.dialogue.spriteImage;
+            objectImage.color = dialogueObject.dialogue.nameColor;
+
+            if (dialogueObject.dialogueSpeaker != null)
+                dialogueObject.dialogueSpeaker.GetComponent<FastObjectJump>().ResetAndPlayJump();
+
+            foreach (string line in dialogueObject.dialogue.sentences)
             {
                 StartCoroutine(TypeSentence(line));
                 yield return new WaitUntil(() => sentenceDisplayCompleted);
