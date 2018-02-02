@@ -15,4 +15,8 @@ MonoBehaviour:
   spriteImage: {fileID: 2800000, guid: c6645b1cebb454d4183607d1aeb8ed1b, type: 3}
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   sentences:
-  - Aenean leo libero, ultrices vel tempor in, rutrum id mauris
+  - Our story starts in the kingdom of Borduria.
+  - A small and happy kingdom where the king is fair and just.
+  - But all was not well.
+  - The king was quite old and often fell ill.
+  - He knew that he did not have much time left in this world.

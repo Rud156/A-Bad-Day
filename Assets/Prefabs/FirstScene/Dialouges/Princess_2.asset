@@ -9,12 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16bcbc178abc67340aa379f105854927, type: 3}
-  m_Name: King_1
+  m_Name: Princess_2
   m_EditorClassIdentifier: 
-  name: KING
-  spriteImage: {fileID: 2800000, guid: 4311bfab19061c442ac2bec69c498198, type: 3}
-  nameColor: {r: 1, g: 0.99215686, b: 0, a: 1}
+  name: PRINCESS
+  spriteImage: {fileID: 2800000, guid: 6d23406b9b47fb64991f5949bd39a566, type: 3}
+  nameColor: {r: 1, g: 0, b: 0.92941177, a: 1}
   sentences:
-  - My child you must know that...
-  - I have brought you here to dicsuss an important matter.
-  - As you know that I don't have too many years to live.
+  - But Father I don't want you to go.
+  - Let's not talk about such a thing today. You need some rest.
+  - You'll catch you're death of cold in this weather.

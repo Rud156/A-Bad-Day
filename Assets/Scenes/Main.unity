@@ -5701,6 +5701,7 @@ MonoBehaviour:
   rotationTime: 8.75
   animator: {fileID: 738662526}
   dampenTime: 5
+  secondaryDialogueManager: {fileID: 1832906019}
 --- !u!1 &415905607
 GameObject:
   m_ObjectHideFlags: 0
@@ -26928,6 +26929,67 @@ MonoBehaviour:
   maxEndPosition: 5
   duration: 3
   direction: 2
+--- !u!1 &1832906019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1832906021}
+  - component: {fileID: 1832906020}
+  m_Layer: 0
+  m_Name: Secondary Dialogue Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1832906020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1832906019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5068cc897263ba449bc45942ed17d7de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 2089371212}
+  dialogueText: {fileID: 80347688}
+  objectImage: {fileID: 1093883484}
+  dialogueObjects:
+  - dialogue: {fileID: 11400000, guid: 34b2c26f85d8f5d469ecb45a0077264e, type: 2}
+    dialogueSpeaker: {fileID: 1729225725}
+  - dialogue: {fileID: 11400000, guid: f870eaa99ffeddc44b69f25f35cfe27b, type: 2}
+    dialogueSpeaker: {fileID: 203632093}
+  - dialogue: {fileID: 11400000, guid: 8bd0a9c0f25f2724b91b88d56a9864c2, type: 2}
+    dialogueSpeaker: {fileID: 1729225725}
+  - dialogue: {fileID: 11400000, guid: 1781970640f86ff4c99219af4fd2a521, type: 2}
+    dialogueSpeaker: {fileID: 203632093}
+  - dialogue: {fileID: 11400000, guid: d599214899f70ef49bfc85ca6e7cb36a, type: 2}
+    dialogueSpeaker: {fileID: 1729225725}
+  - dialogue: {fileID: 11400000, guid: 663145883ccf24e4aa336b4b2ca6e300, type: 2}
+    dialogueSpeaker: {fileID: 203632093}
+  - dialogue: {fileID: 11400000, guid: ff207f4b199e12e47b15a6b766f2d244, type: 2}
+    dialogueSpeaker: {fileID: 1729225725}
+  - dialogue: {fileID: 11400000, guid: babc0a239fd146e46ac4c052f13fd08e, type: 2}
+    dialogueSpeaker: {fileID: 203632093}
+  waitTimeAfterDialogue: 2
+--- !u!4 &1832906021
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1832906019}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1841774751
 GameObject:
   m_ObjectHideFlags: 0
@@ -27387,10 +27449,6 @@ MonoBehaviour:
   dialogueObjects:
   - dialogue: {fileID: 11400000, guid: edf478700b7903a45bb5c50db0f607dc, type: 2}
     dialogueSpeaker: {fileID: 0}
-  - dialogue: {fileID: 11400000, guid: f870eaa99ffeddc44b69f25f35cfe27b, type: 2}
-    dialogueSpeaker: {fileID: 203632093}
-  - dialogue: {fileID: 11400000, guid: 34b2c26f85d8f5d469ecb45a0077264e, type: 2}
-    dialogueSpeaker: {fileID: 1729225725}
   waitTimeAfterDialogue: 2
 --- !u!1 &1872778150
 GameObject:

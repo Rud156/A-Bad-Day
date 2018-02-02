@@ -15,5 +15,4 @@ MonoBehaviour:
   spriteImage: {fileID: 2800000, guid: 6d23406b9b47fb64991f5949bd39a566, type: 3}
   nameColor: {r: 1, g: 0, b: 0.92941177, a: 1}
   sentences:
-  - Aliquam tristique pulvinar nulla
-  - Aenean leo libero, ultrices vel tempor in, rutrum id mauris
+  - No. Father don't say such a thing.
