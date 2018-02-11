@@ -37,7 +37,7 @@ public class CameraRotator : MonoBehaviour
 
         yield return new WaitForSeconds(0.99f);
         animationComplete = false;
-        animator.SetBool("ZoomIn", true);
+        // animator.SetBool("ZoomIn", true);
         playerAnimator.enabled = true;
 
         yield return new WaitForSeconds(animationTime);
