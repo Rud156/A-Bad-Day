@@ -12,10 +12,10 @@ public class FaderNegative : MonoBehaviour
 
     [Header("Required Stats")]
     public float reductionRate = 5;
-    public float startAlpha = 0;
-    public float endAlpha = 255;
 
-    private float currentReductionRate;
+    private float startAlpha = 0;
+    private float endAlpha = 255;
+private float currentReductionRate;
 
     void Start()
     {

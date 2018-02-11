@@ -15,8 +15,8 @@ public class Fader : MonoBehaviour
 
     [Header("Required Stats")]
     public float reductionRate = 5;
-    public float startAlpha = 255;
-
+    
+    private float startAlpha = 255;
     private float currentReductionRate;
 
     // Use this for initialization
