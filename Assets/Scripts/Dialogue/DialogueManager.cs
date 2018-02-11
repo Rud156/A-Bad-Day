@@ -18,6 +18,9 @@ public class DialogueManager : MonoBehaviour
     public Text dialogueText;
     public RawImage objectImage;
 
+    [Header("Dialogue Panel")]
+    public GameObject dialoguePanel;
+
     [Header("Dialogue Data")]
     public DialogueObject[] dialogueObjects;
     public float waitTimeAfterDialogue = 2;
@@ -33,6 +36,7 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator StartDialogue()
     {
+        dialoguePanel.SetActive(true);
         foreach (DialogueObject dialogueObject in dialogueObjects)
         {
             nameText.text = dialogueObject.dialogue.name;
@@ -52,6 +56,7 @@ public class DialogueManager : MonoBehaviour
             yield return null;
         }
 
+        yield return new WaitForSeconds(waitTimeAfterDialogue);
         EndDialogue();
     }
 
@@ -72,5 +77,6 @@ public class DialogueManager : MonoBehaviour
     private void EndDialogue()
     {
         Debug.Log("End of conversation");
+        dialoguePanel.SetActive(false);
     }
 }

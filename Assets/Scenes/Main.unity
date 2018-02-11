@@ -3063,31 +3063,31 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.132
       objectReference: {fileID: 0}
     - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.35
+      value: -0.092
       objectReference: {fileID: 0}
     - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
       propertyPath: m_RootOrder
@@ -3095,19 +3095,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.050000016
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.025000008
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1939851408599548, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
       propertyPath: m_Name
       value: Princess
+      objectReference: {fileID: 0}
+    - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939851408599548, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
@@ -3138,6 +3146,38 @@ MonoBehaviour:
   maxJumpCount: 1
   dropParticles: {fileID: 1734460532577352, guid: 3124fa1ed6be0c046a3a49b2b8e673ed,
     type: 2}
+  heightDistance: 0.35
+--- !u!114 &203632096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203632093}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ee8a264f3941cb458ebc086c842c5da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropParticles: {fileID: 1734460532577352, guid: 3124fa1ed6be0c046a3a49b2b8e673ed,
+    type: 2}
+  heightDistance: 0.3
+--- !u!95 &203632097
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203632093}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 49a53e416b7f2c3419573f9bfbe3d864, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &210252127
 GameObject:
   m_ObjectHideFlags: 0
@@ -5702,6 +5742,8 @@ MonoBehaviour:
   animator: {fileID: 738662526}
   dampenTime: 5
   secondaryDialogueManager: {fileID: 1832906019}
+  playerAnimator: {fileID: 203632097}
+  animationTime: 4.49
 --- !u!1 &415905607
 GameObject:
   m_ObjectHideFlags: 0
@@ -25571,15 +25613,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.05
+      value: 0.317
       objectReference: {fileID: 0}
     - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.35
+      value: -0.4270093
       objectReference: {fileID: 0}
     - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
       propertyPath: m_LocalRotation.x
@@ -25617,6 +25659,10 @@ Prefab:
       propertyPath: m_Name
       value: King
       objectReference: {fileID: 0}
+    - target: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54db2af3af1ae384a945f1a789430852, type: 2}
   m_IsPrefabParent: 0
@@ -25641,6 +25687,7 @@ MonoBehaviour:
   maxJumpCount: 1
   dropParticles: {fileID: 1734460532577352, guid: 3124fa1ed6be0c046a3a49b2b8e673ed,
     type: 2}
+  heightDistance: 0.5
 --- !u!4 &1729225730 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4462739866636748, guid: 54db2af3af1ae384a945f1a789430852,
@@ -26959,6 +27006,7 @@ MonoBehaviour:
   nameText: {fileID: 2089371212}
   dialogueText: {fileID: 80347688}
   objectImage: {fileID: 1093883484}
+  dialoguePanel: {fileID: 248761546}
   dialogueObjects:
   - dialogue: {fileID: 11400000, guid: 34b2c26f85d8f5d469ecb45a0077264e, type: 2}
     dialogueSpeaker: {fileID: 1729225725}
@@ -27446,6 +27494,7 @@ MonoBehaviour:
   nameText: {fileID: 2089371212}
   dialogueText: {fileID: 80347688}
   objectImage: {fileID: 1093883484}
+  dialoguePanel: {fileID: 248761546}
   dialogueObjects:
   - dialogue: {fileID: 11400000, guid: edf478700b7903a45bb5c50db0f607dc, type: 2}
     dialogueSpeaker: {fileID: 0}

@@ -16,6 +16,6 @@ public class DestroyAfterPlaying : MonoBehaviour
     void Update()
     {
         if (!particles.isPlaying)
-            Destroy(particles);
+            Destroy(gameObject);
     }
 }

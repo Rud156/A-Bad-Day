@@ -14,6 +14,10 @@ public class CameraRotator : MonoBehaviour
     [Header("Dialogue Attributes")]
     public GameObject secondaryDialogueManager;
 
+    [Header("Player Attributes")]
+    public Animator playerAnimator;
+    public float animationTime = 4.49f;
+
     private bool rotate = false;
     private bool animationComplete = false;
 
@@ -34,7 +38,10 @@ public class CameraRotator : MonoBehaviour
         yield return new WaitForSeconds(0.99f);
         animationComplete = false;
         animator.SetBool("ZoomIn", true);
+        playerAnimator.enabled = true;
 
+        yield return new WaitForSeconds(animationTime);
+        playerAnimator.enabled = false;
         secondaryDialogueManager.SetActive(true);
     }
 

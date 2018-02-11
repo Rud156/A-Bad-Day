@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class FastObjectJump : MonoBehaviour
 {
-    [Header("Requied Attributes")]
+    [Header("Required Attributes")]
     public float moveSpeed;
     public float jumpAboveHeight;
     public float maxJumpCount;
     public GameObject dropParticles;
+
+    [Header("Particles Height Distance")]
+    public float heightDistance = 0.25f;
 
 
     private float currentJumpCount;
@@ -62,7 +65,7 @@ public class FastObjectJump : MonoBehaviour
 
             GameObject particles = Instantiate(
                 dropParticles,
-                gameObject.transform.position - Vector3.up * 0.25f,
+                gameObject.transform.position - Vector3.up * heightDistance,
                 dropParticles.transform.rotation
             ) as GameObject;
             particles.transform.SetParent(gameObject.transform.parent);
