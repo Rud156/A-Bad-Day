@@ -5740,7 +5740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 40
   rotationTime: 8.75
-  cameraAnimator: {fileID: 0}
+  cameraAnimator: {fileID: 738662526}
   dampenTime: 5
   secondaryDialogueManager: {fileID: 1832906019}
   playerAnimator: {fileID: 203632097}
@@ -27049,6 +27049,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1832906021}
   - component: {fileID: 1832906020}
+  - component: {fileID: 1832906023}
+  - component: {fileID: 1832906022}
   m_Layer: 0
   m_Name: Secondary Dialogue Manager
   m_TagString: Untagged
@@ -27102,6 +27104,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1832906022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1832906019}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68176ed910e08414bb6d28ab50d9ec11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faderImage: {fileID: 1267323859}
+  reductionRate: 75
+  startAlpha: 0
+  endAlpha: 255
+--- !u!114 &1832906023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1832906019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02af8a48be15ee2468ddd7a91c9d375e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1841774751
 GameObject:
   m_ObjectHideFlags: 0

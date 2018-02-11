@@ -13,6 +13,9 @@ public class DialogueManager : MonoBehaviour
         public GameObject dialogueSpeaker;
     }
 
+    public delegate void OnDialogueEnded();
+    public OnDialogueEnded onDialogueEndedCallback;
+
     [Header("Required Components")]
     public Text nameText;
     public Text dialogueText;
@@ -78,5 +81,8 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("End of conversation");
         dialoguePanel.SetActive(false);
+
+        if (onDialogueEndedCallback != null)
+            onDialogueEndedCallback.Invoke();
     }
 }

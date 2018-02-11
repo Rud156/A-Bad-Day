@@ -22,7 +22,7 @@ public class Fader : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
-        currentReductionRate = 0;
+        currentReductionRate = 1;
         cameraRotator.enabled = false;
         cameraAnimator.enabled = false;
     }
