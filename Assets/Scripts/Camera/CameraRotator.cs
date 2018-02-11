@@ -8,7 +8,7 @@ public class CameraRotator : MonoBehaviour
     public float rotationTime = 7;
 
     [Header("Camera Attributes")]
-    public Animator animator;
+    public Animator cameraAnimator;
     public float dampenTime = 5;
 
     [Header("Dialogue Attributes")]
