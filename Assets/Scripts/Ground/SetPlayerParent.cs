@@ -19,6 +19,6 @@ public class SetPlayerParent : MonoBehaviour
             return;
         }
 
-        player.transform.SetParent(gameObject.transform);
+        player.transform.SetParent(gameObject.transform.parent);
     }
 }

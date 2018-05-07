@@ -11,32 +11,31 @@ public class Dash : MonoBehaviour
 
     private float currentDashTime;
     private Rigidbody target;
-    private bool dashStarted;
     private Vector3 directionVector;
 
     // Use this for initialization
     void Start()
     {
         target = gameObject.GetComponent<Rigidbody>();
-        dashStarted = false;
+        StaticPlayerData.dashStarted = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D) && !dashStarted)
+        if (Input.GetKeyDown(KeyCode.W) && !StaticPlayerData.dashStarted)
         {
-            dashStarted = true;
+            StaticPlayerData.dashStarted = true;
             currentDashTime = startDashTime;
             directionVector = gameObject.transform.forward;
             gameObject.transform.SetParent(null);
             Instantiate(dashEffect, gameObject.transform.position, dashEffect.transform.rotation);
         }
-        else if (dashStarted)
+        else if (StaticPlayerData.dashStarted)
         {
             if (currentDashTime <= 0)
             {
-                dashStarted = false;
+                StaticPlayerData.dashStarted = false;
                 target.velocity = Vector3.zero;
                 directionVector = Vector3.zero;
             }

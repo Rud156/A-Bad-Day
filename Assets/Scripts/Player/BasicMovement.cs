@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BasicMovement : MonoBehaviour
 {
+    public float movementSpeed = 10f;
+    public float rotationSpeed = 10f;
 
     private Rigidbody target;
 
@@ -16,6 +18,13 @@ public class BasicMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		// TODO: Complete This
+        float moveX = Input.GetAxis("Horizontal");
+        target.transform.Rotate(Vector3.up * moveX * rotationSpeed * Time.deltaTime);
+
+        if (StaticPlayerData.dashStarted)
+            return;
+
+        float moveZ = Input.GetAxis("Vertical");
+        target.velocity += gameObject.transform.forward * moveZ * movementSpeed * Time.deltaTime;
     }
 }
