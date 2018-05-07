@@ -16,8 +16,10 @@ public class BetterJump : MonoBehaviour
         target = gameObject.GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    /// <summary>
+    /// This function is called every fixed framerate frame, if the MonoBehaviour is enabled.
+    /// </summary>
+    void FixedUpdate()
     {
         if (target.velocity.y < 0)
         {

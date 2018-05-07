@@ -21,10 +21,8 @@ public class BasicMovement : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal");
         target.transform.Rotate(Vector3.up * moveX * rotationSpeed * Time.deltaTime);
 
-        if (StaticPlayerData.dashStarted)
-            return;
-
         float moveZ = Input.GetAxis("Vertical");
-        target.velocity += gameObject.transform.forward * moveZ * movementSpeed * Time.deltaTime;
+        Vector3 forwardMovement = gameObject.transform.forward * moveZ * movementSpeed * Time.deltaTime;
+        target.AddForce(forwardMovement, ForceMode.VelocityChange);
     }
 }

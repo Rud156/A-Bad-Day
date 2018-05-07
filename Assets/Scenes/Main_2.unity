@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07516124, g: 0.13104603, b: 0.13660651, a: 1}
+  m_IndirectSpecularColor: {r: 0.11183051, g: 0.3782864, b: 0.29779038, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -6204,8 +6204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09661adcd6d58449acef17948cc5303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSpeed: 50
-  startDashTime: 0.3
+  dashSpeed: 30
   dashEffect: {fileID: 1648579617381568, guid: 0b820a144246fc3498f1c24fba2f2b03, type: 2}
 --- !u!114 &178238728
 MonoBehaviour:
@@ -6231,7 +6230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01a0f783666ea440af111589a516efb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpVelocity: 20
+  jumpVelocity: 14
 --- !u!23 &178238730
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16728,13 +16727,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 461494496}
-  m_LocalRotation: {x: -0.25492013, y: -0.57649755, z: -0.44306433, w: 0.63746405}
-  m_LocalPosition: {x: 22, y: 55, z: -38}
+  m_LocalRotation: {x: 0.5178458, y: -0, z: -0, w: 0.85547405}
+  m_LocalPosition: {x: 22, y: 7.1, z: -38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -56.705, y: -788.03503, z: -29.577002}
+  m_LocalEulerAnglesHint: {x: 62.376003, y: 0, z: 0}
 --- !u!1 &464405462
 GameObject:
   m_ObjectHideFlags: 0
