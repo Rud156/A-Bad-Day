@@ -18,6 +18,9 @@ public class BasicMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (StaticPlayerData.stopPlayerMovement)
+            return;
+
         float moveX = Input.GetAxis("Horizontal");
         target.transform.Rotate(Vector3.up * moveX * rotationSpeed * Time.deltaTime);
 

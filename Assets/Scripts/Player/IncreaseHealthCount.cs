@@ -12,11 +12,17 @@ public class IncreaseHealthCount : MonoBehaviour
         if (!other.CompareTag("HealthCollectible"))
             return;
 
-        Instantiate(healthPortalParticleEffect,
+        GameObject effect = Instantiate(healthPortalParticleEffect,
             gameObject.transform.position,
             healthPortalParticleEffect.transform.rotation);
-        Destroy(other.gameObject);
+        effect.GetComponent<PausePlayerTillEffectComplete>().SetPlayerRigidBody(
+            gameObject.GetComponent<Rigidbody>()
+        );
 
+        effect.transform.SetParent(other.transform.parent);
+        gameObject.transform.SetParent(other.transform.parent);
+
+        Destroy(other.gameObject);
         StaticPlayerData.healthPortalsCollected += 1;
 
         CheckCollectedCount();
@@ -26,8 +32,6 @@ public class IncreaseHealthCount : MonoBehaviour
     {
         int healthPortalsCollected = StaticPlayerData.healthPortalsCollected;
         if (healthPortalsCollected == StaticPlayerData.maxHealthPortalsForIncrease)
-        {
             StaticPlayerData.maxLives += 1;
-        }
     }
 }

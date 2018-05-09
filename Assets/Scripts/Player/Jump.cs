@@ -20,6 +20,9 @@ public class Jump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (StaticPlayerData.stopPlayerMovement)
+            return;
+
         if (Input.GetButtonDown("Jump"))
             jumpRequest = true;
     }

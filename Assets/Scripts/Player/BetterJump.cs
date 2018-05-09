@@ -21,6 +21,9 @@ public class BetterJump : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
+        if (StaticPlayerData.stopPlayerMovement)
+            return;
+
         if (target.velocity.y < 0)
         {
             target.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;

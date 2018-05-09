@@ -16,4 +16,6 @@ public class StaticPlayerData : MonoBehaviour
 	public static int currentDashes = 0;
 	public static int dashPortalsCollected = 0;
 	public static int maxDashPortalsForIncrease = 2;
+
+	public static bool stopPlayerMovement = false;
 }

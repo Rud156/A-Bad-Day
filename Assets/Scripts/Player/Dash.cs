@@ -20,7 +20,10 @@ public class Dash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (StaticPlayerData.stopPlayerMovement)
+            return;
+
+        if (Input.GetButtonDown("Dash"))
         {
             directionVector = gameObject.transform.forward;
             gameObject.transform.SetParent(null);
