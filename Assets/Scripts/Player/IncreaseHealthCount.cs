@@ -32,6 +32,6 @@ public class IncreaseHealthCount : MonoBehaviour
     {
         int healthPortalsCollected = StaticPlayerData.healthPortalsCollected;
         if (healthPortalsCollected == StaticPlayerData.maxHealthPortalsForIncrease)
-            StaticPlayerData.maxLives += 1;
+            StaticPlayerData.maxHealth += 1;
     }
 }

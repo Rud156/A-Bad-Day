@@ -5,6 +5,7 @@ using UnityEngine;
 public class Dash : MonoBehaviour
 {
 
+    [Header("Basic Dash Requirements")]
     public float dashSpeed = 50;
     public GameObject dashEffect;
 
@@ -23,8 +24,11 @@ public class Dash : MonoBehaviour
         if (StaticPlayerData.stopPlayerMovement)
             return;
 
-        if (Input.GetButtonDown("Dash"))
+        float currentDashes = StaticPlayerData.currentDashes;
+        float dashUseRate = StaticPlayerData.dashUseRate;
+        if (Input.GetButtonDown("Dash") && currentDashes - dashUseRate >= 0)
         {
+            StaticPlayerData.currentDashes -= dashUseRate;
             directionVector = gameObject.transform.forward;
             gameObject.transform.SetParent(null);
             target.AddForce(directionVector * dashSpeed, ForceMode.Impulse);

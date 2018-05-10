@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BasicMovement : MonoBehaviour
 {
+    [Header("Default Speeds")]
     public float movementSpeed = 10f;
     public float rotationSpeed = 10f;
 

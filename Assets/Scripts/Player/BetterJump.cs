@@ -5,6 +5,7 @@ using UnityEngine;
 public class BetterJump : MonoBehaviour
 {
 
+    [Header("Jump Fall Rates")]
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2;
 
