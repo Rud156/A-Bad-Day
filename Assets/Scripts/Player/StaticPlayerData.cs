@@ -20,4 +20,6 @@ public class StaticPlayerData : MonoBehaviour
 	public static float dashUseRate = 1f;
 
 	public static bool stopPlayerMovement = false;
+
+	public static int collectedGlowingOrbs = 0;
 }

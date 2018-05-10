@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DashCollectible
   - HealthCollectible
+  - GlowingOrb
   layers:
   - Default
   - TransparentFX
