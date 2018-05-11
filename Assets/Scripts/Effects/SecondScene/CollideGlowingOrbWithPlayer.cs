@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollideWithGlowingOrb : MonoBehaviour
+public class CollideGlowingOrbWithPlayer : MonoBehaviour
 {
     public GameObject glowingOrbCollectionEffect;
 
@@ -13,13 +13,13 @@ public class CollideWithGlowingOrb : MonoBehaviour
     void OnParticleCollision(GameObject other)
     {
         Rigidbody target = other.GetComponent<Rigidbody>();
-        if (!target || !other.CompareTag("PLayer"))
+        if (!target || !other.CompareTag("Player"))
             return;
 
         StaticPlayerData.collectedGlowingOrbs += 1;
-        Instantiate(glowingOrbCollectionEffect,
-            other.transform.position,
-            glowingOrbCollectionEffect.transform.rotation);
+        // Instantiate(glowingOrbCollectionEffect,
+        //     other.transform.position,
+        //     glowingOrbCollectionEffect.transform.rotation);
         Destroy(gameObject);
     }
 }

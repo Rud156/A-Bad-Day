@@ -2976,6 +2976,23 @@ MonoBehaviour:
   maxEndPosition: 1
   duration: 1
   direction: 1
+--- !u!1 &78831116 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54,
+    type: 2}
+  m_PrefabInternal: {fileID: 1350692357}
+--- !u!114 &78831117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 78831116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c712c7eb5615fbc4f9e663edc0d7e1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowingOrbCollectionEffect: {fileID: 0}
 --- !u!1 &85725222
 GameObject:
   m_ObjectHideFlags: 0
@@ -6237,6 +6254,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 174967441}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &175890214 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54,
+    type: 2}
+  m_PrefabInternal: {fileID: 522853927}
+--- !u!114 &175890215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 175890214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c712c7eb5615fbc4f9e663edc0d7e1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowingOrbCollectionEffect: {fileID: 0}
 --- !u!1 &178238726
 GameObject:
   m_ObjectHideFlags: 0
@@ -6256,6 +6290,7 @@ GameObject:
   - component: {fileID: 178238735}
   - component: {fileID: 178238737}
   - component: {fileID: 178238736}
+  - component: {fileID: 178238738}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6426,6 +6461,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPortalParticleEffect: {fileID: 1843743366249608, guid: e9ccedcccc87bf54e8ac810f8cee3c7d,
     type: 2}
+--- !u!114 &178238738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 178238726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab94b1d337521c6478620a1d8c8deab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetPosition: {x: 1.1, y: 1.1, z: -11.25}
 --- !u!1 &181116855
 GameObject:
   m_ObjectHideFlags: 0
@@ -14853,7 +14900,7 @@ Prefab:
     - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
         type: 2}
       propertyPath: randomSeed
-      value: -854920388
+      value: -166686413
       objectReference: {fileID: 0}
     - target: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
       propertyPath: m_Name
@@ -14897,6 +14944,21 @@ Prefab:
     - target: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
       propertyPath: m_TagString
       value: GlowingOrb
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.multiplyColliderForceByCollisionAngle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
@@ -16811,7 +16873,7 @@ Prefab:
     - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
         type: 2}
       propertyPath: randomSeed
-      value: 163805914
+      value: 860269287
       objectReference: {fileID: 0}
     - target: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
       propertyPath: m_Name
@@ -16855,6 +16917,21 @@ Prefab:
     - target: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
       propertyPath: m_TagString
       value: GlowingOrb
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.multiplyColliderForceByCollisionAngle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
@@ -20072,7 +20149,7 @@ Prefab:
     - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
         type: 2}
       propertyPath: randomSeed
-      value: 1430155331
+      value: -1579297033
       objectReference: {fileID: 0}
     - target: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
       propertyPath: m_Name
@@ -20116,6 +20193,21 @@ Prefab:
     - target: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
       propertyPath: m_TagString
       value: GlowingOrb
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.multiplyColliderForceByCollisionAngle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
@@ -20561,7 +20653,7 @@ Prefab:
     - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
         type: 2}
       propertyPath: randomSeed
-      value: 69118630
+      value: 558038314
       objectReference: {fileID: 0}
     - target: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
       propertyPath: m_Name
@@ -20605,6 +20697,21 @@ Prefab:
     - target: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
       propertyPath: m_TagString
       value: GlowingOrb
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.multiplyColliderForceByCollisionAngle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
@@ -21188,6 +21295,90 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 546807367}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &548729208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 548729212}
+  - component: {fileID: 548729211}
+  - component: {fileID: 548729210}
+  - component: {fileID: 548729209}
+  m_Layer: 0
+  m_Name: Reset Ground
+  m_TagString: ResetGround
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &548729209
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 548729208}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &548729210
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 548729208}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &548729211
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 548729208}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &548729212
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 548729208}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 266, y: -20, z: -215}
+  m_LocalScale: {x: 1000, y: 1, z: 2000}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &549872204
 GameObject:
   m_ObjectHideFlags: 0
@@ -21646,6 +21837,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &564218233 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54,
+    type: 2}
+  m_PrefabInternal: {fileID: 459603663}
+--- !u!114 &564218234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 564218233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c712c7eb5615fbc4f9e663edc0d7e1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowingOrbCollectionEffect: {fileID: 0}
 --- !u!1 &569458524
 GameObject:
   m_ObjectHideFlags: 0
@@ -22354,7 +22562,7 @@ Prefab:
     - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
         type: 2}
       propertyPath: randomSeed
-      value: 307689445
+      value: 216239414
       objectReference: {fileID: 0}
     - target: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
       propertyPath: m_Name
@@ -22398,6 +22606,21 @@ Prefab:
     - target: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
       propertyPath: m_TagString
       value: GlowingOrb
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.multiplyColliderForceByCollisionAngle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
@@ -23743,6 +23966,23 @@ MonoBehaviour:
   maxEndPosition: 2
   duration: 2
   direction: 2
+--- !u!1 &623145055 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54,
+    type: 2}
+  m_PrefabInternal: {fileID: 422735212}
+--- !u!114 &623145056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 623145055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c712c7eb5615fbc4f9e663edc0d7e1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowingOrbCollectionEffect: {fileID: 0}
 --- !u!1 &623205711
 GameObject:
   m_ObjectHideFlags: 0
@@ -26115,7 +26355,7 @@ Prefab:
     - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
         type: 2}
       propertyPath: randomSeed
-      value: 936949729
+      value: 670057067
       objectReference: {fileID: 0}
     - target: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
       propertyPath: m_Name
@@ -26159,6 +26399,21 @@ Prefab:
     - target: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
       propertyPath: m_TagString
       value: GlowingOrb
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.multiplyColliderForceByCollisionAngle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
@@ -27499,7 +27754,7 @@ Prefab:
     - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
         type: 2}
       propertyPath: randomSeed
-      value: -1371492710
+      value: -1376954286
       objectReference: {fileID: 0}
     - target: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
       propertyPath: m_Name
@@ -27543,6 +27798,21 @@ Prefab:
     - target: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
       propertyPath: m_TagString
       value: GlowingOrb
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.multiplyColliderForceByCollisionAngle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
@@ -38418,7 +38688,7 @@ Prefab:
     - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
         type: 2}
       propertyPath: randomSeed
-      value: -1932299132
+      value: -306477774
       objectReference: {fileID: 0}
     - target: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
       propertyPath: m_Name
@@ -38462,6 +38732,21 @@ Prefab:
     - target: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
       propertyPath: m_TagString
       value: GlowingOrb
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.multiplyColliderForceByCollisionAngle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
@@ -40191,6 +40476,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1112557382}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1112980448 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54,
+    type: 2}
+  m_PrefabInternal: {fileID: 741562622}
+--- !u!114 &1112980449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1112980448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c712c7eb5615fbc4f9e663edc0d7e1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowingOrbCollectionEffect: {fileID: 0}
 --- !u!1 &1116587898
 GameObject:
   m_ObjectHideFlags: 0
@@ -40281,7 +40583,7 @@ Prefab:
     - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
         type: 2}
       propertyPath: randomSeed
-      value: 905568751
+      value: -1300747273
       objectReference: {fileID: 0}
     - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
         type: 2}
@@ -40316,6 +40618,66 @@ Prefab:
     - target: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
       propertyPath: m_TagString
       value: GlowingOrb
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.multiplyColliderForceByCollisionAngle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: InitialModule.startSize.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: TrailModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: TrailModule.mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: TrailModule.textureMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: TrailModule.worldSpace
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: TrailModule.dieWithParticles
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: TrailModule.sizeAffectsWidth
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
@@ -40657,6 +41019,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1122775097}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1122841496 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54,
+    type: 2}
+  m_PrefabInternal: {fileID: 1053245869}
+--- !u!114 &1122841497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1122841496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c712c7eb5615fbc4f9e663edc0d7e1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowingOrbCollectionEffect: {fileID: 0}
 --- !u!1 &1123789229
 GameObject:
   m_ObjectHideFlags: 0
@@ -47895,7 +48274,7 @@ Prefab:
     - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
         type: 2}
       propertyPath: randomSeed
-      value: 943306437
+      value: 2093375396
       objectReference: {fileID: 0}
     - target: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
       propertyPath: m_Name
@@ -47939,6 +48318,21 @@ Prefab:
     - target: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
       propertyPath: m_TagString
       value: GlowingOrb
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: CollisionModule.multiplyColliderForceByCollisionAngle
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
@@ -48130,6 +48524,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1355165999}
   m_Mesh: {fileID: 4300000, guid: c3296e31c8501a140b31eb0e32df35c6, type: 3}
+--- !u!1 &1357167065 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54,
+    type: 2}
+  m_PrefabInternal: {fileID: 529862902}
+--- !u!114 &1357167066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1357167065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c712c7eb5615fbc4f9e663edc0d7e1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowingOrbCollectionEffect: {fileID: 0}
 --- !u!1 &1358423692
 GameObject:
   m_ObjectHideFlags: 0
@@ -51092,6 +51503,23 @@ MonoBehaviour:
   maxEndPosition: 2
   duration: 2
   direction: 2
+--- !u!1 &1443124948 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54,
+    type: 2}
+  m_PrefabInternal: {fileID: 1117217879}
+--- !u!114 &1443124949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1443124948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c712c7eb5615fbc4f9e663edc0d7e1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowingOrbCollectionEffect: {fileID: 0}
 --- !u!1 &1445204241
 GameObject:
   m_ObjectHideFlags: 0
@@ -52400,7 +52828,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &1489774844
 Light:
   m_ObjectHideFlags: 0
@@ -76109,6 +76537,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2072651206}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2074463573 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54,
+    type: 2}
+  m_PrefabInternal: {fileID: 591069400}
+--- !u!114 &2074463574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2074463573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c712c7eb5615fbc4f9e663edc0d7e1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowingOrbCollectionEffect: {fileID: 0}
 --- !u!1 &2077179442
 GameObject:
   m_ObjectHideFlags: 0
@@ -77418,6 +77863,23 @@ MonoBehaviour:
   maxEndPosition: 2
   duration: 2
   direction: 2
+--- !u!1 &2105928754 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1755860721229930, guid: c782d5b4d1f05134f9a050fc68026b54,
+    type: 2}
+  m_PrefabInternal: {fileID: 694702484}
+--- !u!114 &2105928755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2105928754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c712c7eb5615fbc4f9e663edc0d7e1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowingOrbCollectionEffect: {fileID: 0}
 --- !u!1 &2106317775
 GameObject:
   m_ObjectHideFlags: 0
