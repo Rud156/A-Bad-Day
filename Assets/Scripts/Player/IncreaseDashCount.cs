@@ -2,11 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IncreaseDashCount : MonoBehaviour
 {
 
     public GameObject dashPortalParticleEffect;
+    public Text displaySmallText;
+    public Text displayBigText;
 
     void OnTriggerEnter(Collider other)
     {
@@ -34,6 +37,16 @@ public class IncreaseDashCount : MonoBehaviour
     {
         int dashPortalsCollected = StaticPlayerData.dashPortalsCollected;
         if (dashPortalsCollected == StaticPlayerData.maxDashPortalsForIncrease)
+        {
             StaticPlayerData.maxDashes += 1;
+            StaticPlayerData.dashPortalsCollected = 0;
+            displayBigText.text = "+1 Dash";
+            displaySmallText.text = "Dash ability increased";
+        }
+        else
+        {
+            displayBigText.text = "+1 Dash Portal";
+            displaySmallText.text = "Collect 1 more to increase dash ability";
+        }
     }
 }

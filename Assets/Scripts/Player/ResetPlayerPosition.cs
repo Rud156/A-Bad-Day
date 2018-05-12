@@ -30,5 +30,6 @@ public class ResetPlayerPosition : MonoBehaviour
         gameObject.transform.SetParent(null);
         target.velocity = Vector3.zero;
         target.transform.position = resetPosition;
+        StaticPlayerData.currentHealthLeft -= 1;
     }
 }

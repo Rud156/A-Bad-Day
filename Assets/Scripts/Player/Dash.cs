@@ -24,11 +24,11 @@ public class Dash : MonoBehaviour
         if (StaticPlayerData.stopPlayerMovement)
             return;
 
-        float currentDashes = StaticPlayerData.currentDashes;
+        float currentDashes = StaticPlayerData.currentDashesLeft;
         float dashUseRate = StaticPlayerData.dashUseRate;
         if (Input.GetButtonDown("Dash") && currentDashes - dashUseRate >= 0)
         {
-            StaticPlayerData.currentDashes -= dashUseRate;
+            StaticPlayerData.currentDashesLeft -= dashUseRate;
             directionVector = gameObject.transform.forward;
             gameObject.transform.SetParent(null);
             target.AddForce(directionVector * dashSpeed, ForceMode.Impulse);
