@@ -5,11 +5,10 @@ using UnityEngine;
 public class PausePlayerTillEffectComplete : MonoBehaviour
 {
 
-    private Rigidbody player;
+    public Rigidbody player;
 
-    public void SetPlayerRigidBody(Rigidbody player)
+    public void StopPlayerMovement()
     {
-        this.player = player;
         StaticPlayerData.stopPlayerMovement = true;
         this.player.useGravity = false;
         this.player.velocity = Vector3.zero;

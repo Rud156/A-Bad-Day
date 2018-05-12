@@ -19,9 +19,7 @@ public class IncreaseDashCount : MonoBehaviour
         gameObject.transform.SetParent(other.transform.parent);
         gameObject.transform.position = other.transform.position;
         other.GetComponent<Animator>().enabled = true;
-        other.GetComponent<PausePlayerTillEffectComplete>().SetPlayerRigidBody(
-            gameObject.GetComponent<Rigidbody>()
-        );
+        other.GetComponent<PausePlayerTillEffectComplete>().StopPlayerMovement();
 
         StaticPlayerData.dashPortalsCollected += 1;
         CheckCollectedCount();
