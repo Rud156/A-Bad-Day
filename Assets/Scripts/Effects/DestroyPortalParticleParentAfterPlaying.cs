@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyParticleParentAfterPlaying : MonoBehaviour {
+public class DestroyPortalParticleParentAfterPlaying : MonoBehaviour {
 
 	private GameObject parent;
 	private ParticleSystem particles;
 
 	// Use this for initialization
 	void Start () {
-		parent = gameObject.transform.parent.gameObject;
+		parent = gameObject.transform.parent.parent.gameObject;
 		particles = gameObject.GetComponent<ParticleSystem>();
 	}
 	

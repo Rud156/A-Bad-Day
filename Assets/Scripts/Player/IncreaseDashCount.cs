@@ -6,10 +6,9 @@ using UnityEngine.UI;
 
 public class IncreaseDashCount : MonoBehaviour
 {
-
-    public GameObject dashPortalParticleEffect;
     public Text displaySmallText;
     public Text displayBigText;
+    public float colorReductionRate = 0.001f;
 
     void OnTriggerEnter(Collider other)
     {
@@ -17,19 +16,14 @@ public class IncreaseDashCount : MonoBehaviour
         if (!other.CompareTag("DashCollectible"))
             return;
 
-        GameObject effect = Instantiate(dashPortalParticleEffect,
-            gameObject.transform.position,
-            dashPortalParticleEffect.transform.rotation);
-        effect.GetComponent<PausePlayerTillEffectComplete>().SetPlayerRigidBody(
+        gameObject.transform.SetParent(other.transform.parent);
+        gameObject.transform.position = other.transform.position;
+        other.GetComponent<Animator>().enabled = true;
+        other.GetComponent<PausePlayerTillEffectComplete>().SetPlayerRigidBody(
             gameObject.GetComponent<Rigidbody>()
         );
 
-        effect.transform.SetParent(other.transform.parent);
-        gameObject.transform.SetParent(other.transform.parent);
-
-        Destroy(other.gameObject);
         StaticPlayerData.dashPortalsCollected += 1;
-
         CheckCollectedCount();
     }
 
@@ -42,11 +36,25 @@ public class IncreaseDashCount : MonoBehaviour
             StaticPlayerData.dashPortalsCollected = 0;
             displayBigText.text = "+1 Dash";
             displaySmallText.text = "Dash ability increased";
+            StartCoroutine(ReduceOpacityTo0());
         }
         else
         {
             displayBigText.text = "+1 Dash Portal";
             displaySmallText.text = "Collect 1 more to increase dash ability";
+            StartCoroutine(ReduceOpacityTo0());
+        }
+    }
+
+    IEnumerator ReduceOpacityTo0()
+    {
+        float currentAlpha = 1;
+        while (currentAlpha > 0)
+        {
+            currentAlpha -= colorReductionRate;
+            displayBigText.color = new Color(1, 1, 1, currentAlpha);
+            displaySmallText.color = new Color(0, 0, 1, currentAlpha);
+            yield return null;
         }
     }
 }

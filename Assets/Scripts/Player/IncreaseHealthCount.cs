@@ -5,29 +5,23 @@ using UnityEngine.UI;
 
 public class IncreaseHealthCount : MonoBehaviour
 {
-
-    public GameObject healthPortalParticleEffect;
     public Text displaySmallText;
     public Text displayBigText;
+    public float colorReductionRate = 0.001f;
 
     void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("HealthCollectible"))
             return;
 
-        GameObject effect = Instantiate(healthPortalParticleEffect,
-            gameObject.transform.position,
-            healthPortalParticleEffect.transform.rotation);
-        effect.GetComponent<PausePlayerTillEffectComplete>().SetPlayerRigidBody(
+        gameObject.transform.SetParent(other.transform.parent);
+        gameObject.transform.position = other.transform.position;
+        other.GetComponent<Animator>().enabled = true;
+        other.GetComponent<PausePlayerTillEffectComplete>().SetPlayerRigidBody(
             gameObject.GetComponent<Rigidbody>()
         );
 
-        effect.transform.SetParent(other.transform.parent);
-        gameObject.transform.SetParent(other.transform.parent);
-
-        Destroy(other.gameObject);
         StaticPlayerData.healthPortalsCollected += 1;
-
         CheckCollectedCount();
     }
 
@@ -39,13 +33,30 @@ public class IncreaseHealthCount : MonoBehaviour
         {
             StaticPlayerData.healthPortalsCollected = 0;
             StaticPlayerData.maxHealth += 1;
+
             displayBigText.text = "+1 Health";
+            displayBigText.color = Color.white;
             displaySmallText.text = "Health increased";
+            displaySmallText.color = Color.green;
+            StartCoroutine(ReduceOpacityTo0());
         }
         else
         {
             displayBigText.text = "+1 Health Portal";
             displaySmallText.text = "Collect 1 more to increase health bar";
+            StartCoroutine(ReduceOpacityTo0());
+        }
+    }
+
+    IEnumerator ReduceOpacityTo0()
+    {
+        float currentAlpha = 1;
+        while (currentAlpha > 0)
+        {
+            currentAlpha -= colorReductionRate;
+            displayBigText.color = new Color(1, 1, 1, currentAlpha);
+            displaySmallText.color = new Color(0, 1, 0, currentAlpha);
+            yield return null;
         }
     }
 }
