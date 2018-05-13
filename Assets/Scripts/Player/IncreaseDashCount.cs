@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class IncreaseDashCount : MonoBehaviour
 {
+    public Animator textHolderAnimator;
     public Text displaySmallText;
     public Text displayBigText;
     public float colorReductionRate = 0.001f;
@@ -33,26 +34,18 @@ public class IncreaseDashCount : MonoBehaviour
             PlayerData.maxDashes += 1;
             PlayerData.dashPortalsCollected = 0;
             displayBigText.text = Constants.dashIncreased;
+            displayBigText.color = Color.white;
             displaySmallText.text = Constants.dashIncreasedSubText;
-            StartCoroutine(ReduceOpacityTo0());
+            displaySmallText.color = Color.blue;
+            textHolderAnimator.Play(Constants.secondScreenTextAnimationName);
         }
         else
         {
             displayBigText.text = Constants.dashPortalCollected;
+            displayBigText.color = Color.white;
             displaySmallText.text = Constants.dashPortalCollectedSubText;
-            StartCoroutine(ReduceOpacityTo0());
-        }
-    }
-
-    IEnumerator ReduceOpacityTo0()
-    {
-        float currentAlpha = 1;
-        while (currentAlpha > 0)
-        {
-            currentAlpha -= colorReductionRate;
-            displayBigText.color = new Color(1, 1, 1, currentAlpha);
-            displaySmallText.color = new Color(0, 0, 1, currentAlpha);
-            yield return null;
+            displaySmallText.color = Color.blue;
+            textHolderAnimator.Play(Constants.secondScreenTextAnimationName);
         }
     }
 }

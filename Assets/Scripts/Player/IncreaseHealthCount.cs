@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class IncreaseHealthCount : MonoBehaviour
 {
+    public Animator textHolderAnimator;
     public Text displaySmallText;
     public Text displayBigText;
     public float colorReductionRate = 0.001f;
@@ -37,25 +38,15 @@ public class IncreaseHealthCount : MonoBehaviour
             displayBigText.color = Color.white;
             displaySmallText.text = Constants.healthIncreasedSubText;
             displaySmallText.color = Color.green;
-            StartCoroutine(ReduceOpacityTo0());
+            textHolderAnimator.Play(Constants.secondScreenTextAnimationName);
         }
         else
         {
             displayBigText.text = Constants.healthPortalCollected;
+            displayBigText.color = Color.white;
             displaySmallText.text = Constants.healthPortalCollectedSubText;
-            StartCoroutine(ReduceOpacityTo0());
-        }
-    }
-
-    IEnumerator ReduceOpacityTo0()
-    {
-        float currentAlpha = 1;
-        while (currentAlpha > 0)
-        {
-            currentAlpha -= colorReductionRate;
-            displayBigText.color = new Color(1, 1, 1, currentAlpha);
-            displaySmallText.color = new Color(0, 1, 0, currentAlpha);
-            yield return null;
+            displaySmallText.color = Color.green;
+            textHolderAnimator.Play(Constants.secondScreenTextAnimationName);
         }
     }
 }
