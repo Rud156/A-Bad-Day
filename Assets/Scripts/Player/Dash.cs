@@ -26,7 +26,10 @@ public class Dash : MonoBehaviour
 
         float currentDashes = PlayerData.currentDashesLeft;
         float dashUseRate = PlayerData.dashUseRate;
-        if (Input.GetButtonDown("Dash") && currentDashes - dashUseRate >= 0)
+        if (
+            (Input.GetKeyDown(Constants.dashButtonKeyboard) || Input.GetKeyDown(Constants.dashButtonJoystick))
+            && currentDashes - dashUseRate >= 0
+        )
         {
             PlayerData.currentDashesLeft -= dashUseRate;
             directionVector = gameObject.transform.forward;
