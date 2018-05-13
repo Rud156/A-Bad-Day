@@ -33,19 +33,19 @@ public class IncreaseDashCount : MonoBehaviour
         {
             PlayerData.maxDashes += 1;
             PlayerData.dashPortalsCollected = 0;
-            displayBigText.text = Constants.dashIncreased;
+            displayBigText.text = UITextConstants.dashIncreased;
             displayBigText.color = Color.white;
-            displaySmallText.text = Constants.dashIncreasedSubText;
+            displaySmallText.text = UITextConstants.dashIncreasedSubText;
             displaySmallText.color = Color.blue;
-            textHolderAnimator.Play(Constants.secondScreenTextAnimationName);
+            textHolderAnimator.Play(UITextConstants.secondScreenTextAnimationName);
         }
         else
         {
-            displayBigText.text = Constants.dashPortalCollected;
+            displayBigText.text = UITextConstants.dashPortalCollected;
             displayBigText.color = Color.white;
-            displaySmallText.text = Constants.dashPortalCollectedSubText;
+            displaySmallText.text = UITextConstants.dashPortalCollectedSubText;
             displaySmallText.color = Color.blue;
-            textHolderAnimator.Play(Constants.secondScreenTextAnimationName);
+            textHolderAnimator.Play(UITextConstants.secondScreenTextAnimationName);
         }
     }
 }

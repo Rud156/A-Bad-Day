@@ -34,19 +34,19 @@ public class IncreaseHealthCount : MonoBehaviour
             PlayerData.maxHealth += 1;
             PlayerData.currentHealthLeft += 1;
 
-            displayBigText.text = Constants.healthIncreased;
+            displayBigText.text = UITextConstants.healthIncreased;
             displayBigText.color = Color.white;
-            displaySmallText.text = Constants.healthIncreasedSubText;
+            displaySmallText.text = UITextConstants.healthIncreasedSubText;
             displaySmallText.color = Color.green;
-            textHolderAnimator.Play(Constants.secondScreenTextAnimationName);
+            textHolderAnimator.Play(UITextConstants.secondScreenTextAnimationName);
         }
         else
         {
-            displayBigText.text = Constants.healthPortalCollected;
+            displayBigText.text = UITextConstants.healthPortalCollected;
             displayBigText.color = Color.white;
-            displaySmallText.text = Constants.healthPortalCollectedSubText;
+            displaySmallText.text = UITextConstants.healthPortalCollectedSubText;
             displaySmallText.color = Color.green;
-            textHolderAnimator.Play(Constants.secondScreenTextAnimationName);
+            textHolderAnimator.Play(UITextConstants.secondScreenTextAnimationName);
         }
     }
 }

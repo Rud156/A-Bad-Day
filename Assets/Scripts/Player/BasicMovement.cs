@@ -22,10 +22,10 @@ public class BasicMovement : MonoBehaviour
         if (PlayerData.stopPlayerMovement)
             return;
 
-        float moveX = Input.GetAxis(Constants.horizontalAxis);
+        float moveX = Input.GetAxis(ControlConstants.horizontalAxis);
         target.transform.Rotate(Vector3.up * moveX * rotationSpeed * Time.deltaTime);
 
-        float moveZ = Input.GetAxis(Constants.verticalAxis);
+        float moveZ = Input.GetAxis(ControlConstants.verticalAxis);
         Vector3 forwardMovement = gameObject.transform.forward * moveZ * movementSpeed * Time.deltaTime;
         target.AddForce(forwardMovement, ForceMode.VelocityChange);
     }

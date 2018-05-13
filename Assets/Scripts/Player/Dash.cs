@@ -27,7 +27,7 @@ public class Dash : MonoBehaviour
         float currentDashes = PlayerData.currentDashesLeft;
         float dashUseRate = PlayerData.dashUseRate;
         if (
-            (Input.GetKeyDown(Constants.dashButtonKeyboard) || Input.GetKeyDown(Constants.dashButtonJoystick))
+            (Input.GetKeyDown(ControlConstants.dashButtonKeyboard) || Input.GetKeyDown(ControlConstants.dashButtonJoystick))
             && currentDashes - dashUseRate >= 0
         )
         {
