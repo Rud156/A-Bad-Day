@@ -19,29 +19,30 @@ public class IncreaseHealthCount : MonoBehaviour
         other.GetComponent<Animator>().enabled = true;
         other.GetComponent<PausePlayerTillEffectComplete>().StopPlayerMovement();
 
-        StaticPlayerData.healthPortalsCollected += 1;
+        PlayerData.healthPortalsCollected += 1;
         CheckCollectedCount();
     }
 
     private void CheckCollectedCount()
     {
-        int healthPortalsCollected = StaticPlayerData.healthPortalsCollected;
+        int healthPortalsCollected = PlayerData.healthPortalsCollected;
 
-        if (healthPortalsCollected == StaticPlayerData.maxHealthPortalsForIncrease)
+        if (healthPortalsCollected == PlayerData.maxHealthPortalsForIncrease)
         {
-            StaticPlayerData.healthPortalsCollected = 0;
-            StaticPlayerData.maxHealth += 1;
+            PlayerData.healthPortalsCollected = 0;
+            PlayerData.maxHealth += 1;
+            PlayerData.currentHealthLeft += 1;
 
-            displayBigText.text = "+1 Health";
+            displayBigText.text = Constants.healthIncreased;
             displayBigText.color = Color.white;
-            displaySmallText.text = "Health increased";
+            displaySmallText.text = Constants.healthIncreasedSubText;
             displaySmallText.color = Color.green;
             StartCoroutine(ReduceOpacityTo0());
         }
         else
         {
-            displayBigText.text = "+1 Health Portal";
-            displaySmallText.text = "Collect 1 more to increase health bar";
+            displayBigText.text = Constants.healthPortalCollected;
+            displaySmallText.text = Constants.healthPortalCollectedSubText;
             StartCoroutine(ReduceOpacityTo0());
         }
     }

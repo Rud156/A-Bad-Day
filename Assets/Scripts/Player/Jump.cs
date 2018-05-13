@@ -20,7 +20,7 @@ public class Jump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (StaticPlayerData.stopPlayerMovement)
+        if (PlayerData.stopPlayerMovement)
             return;
 
         if (Input.GetButtonDown("Jump"))
@@ -32,7 +32,7 @@ public class Jump : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
-        if (StaticPlayerData.currentJumpCount >= StaticPlayerData.maxJumpCount)
+        if (PlayerData.currentJumpCount >= PlayerData.maxJumpCount)
         {
             jumpRequest = false;
             return;
@@ -41,7 +41,7 @@ public class Jump : MonoBehaviour
         if (jumpRequest)
         {
             jumpRequest = false;
-            StaticPlayerData.currentJumpCount += 1;
+            PlayerData.currentJumpCount += 1;
             gameObject.transform.SetParent(null);
             target.AddForce(Vector3.up * jumpVelocity, ForceMode.Impulse);
         }

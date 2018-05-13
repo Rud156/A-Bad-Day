@@ -35,8 +35,8 @@ public class SyncHealthAndDash : MonoBehaviour
     /// </summary>
     void LateUpdate()
     {
-        int maxHealth = StaticPlayerData.maxHealth;
-        int currentHealthLeft = StaticPlayerData.currentHealthLeft;
+        int maxHealth = PlayerData.maxHealth;
+        int currentHealthLeft = PlayerData.currentHealthLeft;
         float healthRatio = (float)currentHealthLeft / maxHealth;
         if (healthRatio <= 0.5)
             healthFiller.color = Color.Lerp(minHealthColor, halfHealthColor, healthRatio * 2);
@@ -44,8 +44,8 @@ public class SyncHealthAndDash : MonoBehaviour
             healthFiller.color = Color.Lerp(halfHealthColor, maxHealthColor, (healthRatio - 0.5f) * 2);
         healthSlider.value = healthRatio;
 
-        int maxDashes = StaticPlayerData.maxDashes;
-        float currentDashesLeft = StaticPlayerData.currentDashesLeft;
+        int maxDashes = PlayerData.maxDashes;
+        float currentDashesLeft = PlayerData.currentDashesLeft;
         float dashesRatio = (float)currentDashesLeft / maxDashes;
         if (dashesRatio <= 0.5)
             dashFiller.color = Color.Lerp(minDashColor, halfDashColor, dashesRatio * 2);
@@ -60,11 +60,11 @@ public class SyncHealthAndDash : MonoBehaviour
     {
         while (true)
         {
-            float currentDashes = StaticPlayerData.currentDashesLeft;
-            float dashIncreaseRate = StaticPlayerData.dashIncreaseRate;
-            int maxDashes = StaticPlayerData.maxDashes;
+            float currentDashes = PlayerData.currentDashesLeft;
+            float dashIncreaseRate = PlayerData.dashIncreaseRate;
+            int maxDashes = PlayerData.maxDashes;
             if (currentDashes + dashIncreaseRate <= maxDashes)
-                StaticPlayerData.currentDashesLeft += dashIncreaseRate;
+                PlayerData.currentDashesLeft += dashIncreaseRate;
 
             yield return null;
         }

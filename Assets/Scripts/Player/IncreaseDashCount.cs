@@ -21,25 +21,25 @@ public class IncreaseDashCount : MonoBehaviour
         other.GetComponent<Animator>().enabled = true;
         other.GetComponent<PausePlayerTillEffectComplete>().StopPlayerMovement();
 
-        StaticPlayerData.dashPortalsCollected += 1;
+        PlayerData.dashPortalsCollected += 1;
         CheckCollectedCount();
     }
 
     private void CheckCollectedCount()
     {
-        int dashPortalsCollected = StaticPlayerData.dashPortalsCollected;
-        if (dashPortalsCollected == StaticPlayerData.maxDashPortalsForIncrease)
+        int dashPortalsCollected = PlayerData.dashPortalsCollected;
+        if (dashPortalsCollected == PlayerData.maxDashPortalsForIncrease)
         {
-            StaticPlayerData.maxDashes += 1;
-            StaticPlayerData.dashPortalsCollected = 0;
-            displayBigText.text = "+1 Dash";
-            displaySmallText.text = "Dash ability increased";
+            PlayerData.maxDashes += 1;
+            PlayerData.dashPortalsCollected = 0;
+            displayBigText.text = Constants.dashIncreased;
+            displaySmallText.text = Constants.dashIncreasedSubText;
             StartCoroutine(ReduceOpacityTo0());
         }
         else
         {
-            displayBigText.text = "+1 Dash Portal";
-            displaySmallText.text = "Collect 1 more to increase dash ability";
+            displayBigText.text = Constants.dashPortalCollected;
+            displaySmallText.text = Constants.dashPortalCollectedSubText;
             StartCoroutine(ReduceOpacityTo0());
         }
     }
