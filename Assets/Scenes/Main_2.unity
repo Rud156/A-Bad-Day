@@ -2992,7 +2992,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c712c7eb5615fbc4f9e663edc0d7e1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowingOrbCollectionEffect: {fileID: 0}
+  glowingOrbCollectionEffect: {fileID: 1348369391433130, guid: 8104e04c222827e47b2d753149753ad2,
+    type: 2}
 --- !u!1 &85725222
 GameObject:
   m_ObjectHideFlags: 0
@@ -6270,7 +6271,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c712c7eb5615fbc4f9e663edc0d7e1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowingOrbCollectionEffect: {fileID: 0}
+  glowingOrbCollectionEffect: {fileID: 1348369391433130, guid: 8104e04c222827e47b2d753149753ad2,
+    type: 2}
 --- !u!1 &178238726
 GameObject:
   m_ObjectHideFlags: 0
@@ -6291,6 +6293,7 @@ GameObject:
   - component: {fileID: 178238737}
   - component: {fileID: 178238736}
   - component: {fileID: 178238738}
+  - component: {fileID: 178238739}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6475,6 +6478,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetPosition: {x: 1.1, y: 1.1, z: -11.25}
+--- !u!114 &178238739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 178238726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c712c7eb5615fbc4f9e663edc0d7e1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glowingOrbCollectionEffect: {fileID: 1348369391433130, guid: 8104e04c222827e47b2d753149753ad2,
+    type: 2}
 --- !u!1 &181116855
 GameObject:
   m_ObjectHideFlags: 0
@@ -21847,7 +21863,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c712c7eb5615fbc4f9e663edc0d7e1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowingOrbCollectionEffect: {fileID: 0}
+  glowingOrbCollectionEffect: {fileID: 1348369391433130, guid: 8104e04c222827e47b2d753149753ad2,
+    type: 2}
 --- !u!1 &569458524
 GameObject:
   m_ObjectHideFlags: 0
@@ -23976,7 +23993,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c712c7eb5615fbc4f9e663edc0d7e1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowingOrbCollectionEffect: {fileID: 0}
+  glowingOrbCollectionEffect: {fileID: 1348369391433130, guid: 8104e04c222827e47b2d753149753ad2,
+    type: 2}
 --- !u!1 &623205711
 GameObject:
   m_ObjectHideFlags: 0
@@ -40458,7 +40476,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c712c7eb5615fbc4f9e663edc0d7e1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowingOrbCollectionEffect: {fileID: 0}
+  glowingOrbCollectionEffect: {fileID: 1348369391433130, guid: 8104e04c222827e47b2d753149753ad2,
+    type: 2}
 --- !u!1 &1116587898
 GameObject:
   m_ObjectHideFlags: 0
@@ -40549,7 +40568,7 @@ Prefab:
     - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
         type: 2}
       propertyPath: randomSeed
-      value: -1300747273
+      value: 776963
       objectReference: {fileID: 0}
     - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
         type: 2}
@@ -40638,12 +40657,37 @@ Prefab:
     - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
         type: 2}
       propertyPath: TrailModule.dieWithParticles
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
         type: 2}
       propertyPath: TrailModule.sizeAffectsWidth
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: TrailModule.widthOverTrail.minMaxState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: TrailModule.widthOverTrail.maxCurve.m_Curve.Array.data[1].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: TrailModule.widthOverTrail.maxCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: TrailModule.widthOverTrail.maxCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198522615526234808, guid: c782d5b4d1f05134f9a050fc68026b54,
+        type: 2}
+      propertyPath: TrailModule.widthOverTrail.maxCurve.m_Curve.Array.data[0].value
+      value: 0.33783722
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c782d5b4d1f05134f9a050fc68026b54, type: 2}
@@ -41001,7 +41045,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c712c7eb5615fbc4f9e663edc0d7e1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowingOrbCollectionEffect: {fileID: 0}
+  glowingOrbCollectionEffect: {fileID: 1348369391433130, guid: 8104e04c222827e47b2d753149753ad2,
+    type: 2}
 --- !u!1 &1123789229
 GameObject:
   m_ObjectHideFlags: 0
@@ -48524,7 +48569,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c712c7eb5615fbc4f9e663edc0d7e1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowingOrbCollectionEffect: {fileID: 0}
+  glowingOrbCollectionEffect: {fileID: 1348369391433130, guid: 8104e04c222827e47b2d753149753ad2,
+    type: 2}
 --- !u!1 &1358423692
 GameObject:
   m_ObjectHideFlags: 0
@@ -51503,7 +51549,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c712c7eb5615fbc4f9e663edc0d7e1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowingOrbCollectionEffect: {fileID: 0}
+  glowingOrbCollectionEffect: {fileID: 1348369391433130, guid: 8104e04c222827e47b2d753149753ad2,
+    type: 2}
 --- !u!1 &1445204241
 GameObject:
   m_ObjectHideFlags: 0
@@ -52812,7 +52859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &1489774844
 Light:
   m_ObjectHideFlags: 0
@@ -66024,6 +66071,16 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 199945860732074958, guid: 72ca44704143e4141afa2957e54a1d0f,
+        type: 2}
+      propertyPath: m_SortingFudge
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 199945860732074958, guid: 72ca44704143e4141afa2957e54a1d0f,
+        type: 2}
+      propertyPath: m_SortMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 72ca44704143e4141afa2957e54a1d0f, type: 2}
   m_IsPrefabParent: 0
@@ -76431,7 +76488,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c712c7eb5615fbc4f9e663edc0d7e1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowingOrbCollectionEffect: {fileID: 0}
+  glowingOrbCollectionEffect: {fileID: 1348369391433130, guid: 8104e04c222827e47b2d753149753ad2,
+    type: 2}
 --- !u!1 &2077179442
 GameObject:
   m_ObjectHideFlags: 0
@@ -77757,7 +77815,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c712c7eb5615fbc4f9e663edc0d7e1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowingOrbCollectionEffect: {fileID: 0}
+  glowingOrbCollectionEffect: {fileID: 1348369391433130, guid: 8104e04c222827e47b2d753149753ad2,
+    type: 2}
 --- !u!1 &2106317775
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,9 +17,9 @@ public class CollideGlowingOrbWithPlayer : MonoBehaviour
             return;
 
         StaticPlayerData.collectedGlowingOrbs += 1;
-        // Instantiate(glowingOrbCollectionEffect,
-        //     other.transform.position,
-        //     glowingOrbCollectionEffect.transform.rotation);
+        Instantiate(glowingOrbCollectionEffect,
+            other.transform.position,
+            glowingOrbCollectionEffect.transform.rotation);
         Destroy(gameObject);
     }
 }
