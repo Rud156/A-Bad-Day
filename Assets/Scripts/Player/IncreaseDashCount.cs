@@ -9,7 +9,6 @@ public class IncreaseDashCount : MonoBehaviour
     public Animator textHolderAnimator;
     public Text displaySmallText;
     public Text displayBigText;
-    public float colorReductionRate = 0.001f;
 
     void OnTriggerEnter(Collider other)
     {
@@ -37,7 +36,6 @@ public class IncreaseDashCount : MonoBehaviour
             displayBigText.color = Color.white;
             displaySmallText.text = UITextConstants.dashIncreasedSubText;
             displaySmallText.color = Color.blue;
-            textHolderAnimator.Play(UITextConstants.secondScreenTextAnimationName);
         }
         else
         {
@@ -45,7 +43,7 @@ public class IncreaseDashCount : MonoBehaviour
             displayBigText.color = Color.white;
             displaySmallText.text = UITextConstants.dashPortalCollectedSubText;
             displaySmallText.color = Color.blue;
-            textHolderAnimator.Play(UITextConstants.secondScreenTextAnimationName);
         }
+        textHolderAnimator.Play(UITextConstants.secondScreenTextAnimationName);
     }
 }

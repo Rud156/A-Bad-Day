@@ -9,7 +9,7 @@ public class DestroyPortalParticleParentAfterPlaying : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		parent = gameObject.transform.parent.parent.gameObject;
+		parent = gameObject.transform.parent.gameObject;
 		particles = gameObject.GetComponent<ParticleSystem>();
 	}
 	

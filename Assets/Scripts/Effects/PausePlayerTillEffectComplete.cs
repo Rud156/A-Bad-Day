@@ -20,7 +20,6 @@ public class PausePlayerTillEffectComplete : MonoBehaviour
     void OnDestroy()
     {
         PlayerData.stopPlayerMovement = false;
-        if (this.player)
-            this.player.useGravity = true;
+        this.player.useGravity = true;
     }
 }

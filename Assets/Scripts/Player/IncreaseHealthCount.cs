@@ -8,7 +8,6 @@ public class IncreaseHealthCount : MonoBehaviour
     public Animator textHolderAnimator;
     public Text displaySmallText;
     public Text displayBigText;
-    public float colorReductionRate = 0.001f;
 
     void OnTriggerEnter(Collider other)
     {
@@ -38,7 +37,6 @@ public class IncreaseHealthCount : MonoBehaviour
             displayBigText.color = Color.white;
             displaySmallText.text = UITextConstants.healthIncreasedSubText;
             displaySmallText.color = Color.green;
-            textHolderAnimator.Play(UITextConstants.secondScreenTextAnimationName);
         }
         else
         {
@@ -46,7 +44,7 @@ public class IncreaseHealthCount : MonoBehaviour
             displayBigText.color = Color.white;
             displaySmallText.text = UITextConstants.healthPortalCollectedSubText;
             displaySmallText.color = Color.green;
-            textHolderAnimator.Play(UITextConstants.secondScreenTextAnimationName);
         }
+        textHolderAnimator.Play(UITextConstants.secondScreenTextAnimationName);
     }
 }
