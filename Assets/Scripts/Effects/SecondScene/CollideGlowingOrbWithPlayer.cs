@@ -16,7 +16,7 @@ public class CollideGlowingOrbWithPlayer : MonoBehaviour
         if (!target || !other.CompareTag("Player"))
             return;
 
-        FirstScene.collectedGlowingOrbs += 1;
+        SecondScene.collectedGlowingOrbs += 1;
         Instantiate(glowingOrbCollectionEffect,
             other.transform.position,
             glowingOrbCollectionEffect.transform.rotation);
