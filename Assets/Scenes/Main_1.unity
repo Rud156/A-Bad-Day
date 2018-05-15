@@ -22811,7 +22811,7 @@ Prefab:
     - target: {fileID: 198152464144274352, guid: a38c4cac76a51c140b0031203e139b77,
         type: 2}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 75
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 198152464144274352, guid: a38c4cac76a51c140b0031203e139b77,
         type: 2}
@@ -22827,6 +22827,16 @@ Prefab:
       propertyPath: InitialModule.maxNumParticles
       value: 10000
       objectReference: {fileID: 0}
+    - target: {fileID: 199781948534629190, guid: a38c4cac76a51c140b0031203e139b77,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d8086ab41d9bb8341a4b7980e2ca6244, type: 2}
+    - target: {fileID: 199781948534629190, guid: a38c4cac76a51c140b0031203e139b77,
+        type: 2}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: d8086ab41d9bb8341a4b7980e2ca6244, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a38c4cac76a51c140b0031203e139b77, type: 2}
   m_IsPrefabParent: 0
@@ -27117,8 +27127,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faderImage: {fileID: 1267323859}
   reductionRate: 75
-  startAlpha: 0
-  endAlpha: 255
 --- !u!114 &1832906023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27558,7 +27566,6 @@ MonoBehaviour:
   cameraAnimator: {fileID: 738662526}
   cameraRotator: {fileID: 405692332}
   reductionRate: 50
-  startAlpha: 255
 --- !u!4 &1859535864
 Transform:
   m_ObjectHideFlags: 0
