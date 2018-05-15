@@ -22,7 +22,7 @@ public class BetterJump : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
-        if (PlayerData.stopPlayerMovement)
+        if (Core.stopPlayerMovement)
             return;
 
         if (target.velocity.y < 0)

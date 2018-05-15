@@ -20,6 +20,6 @@ public class SetPlayerParent : MonoBehaviour
         }
 
         player.transform.SetParent(gameObject.transform.parent);
-        PlayerData.currentJumpCount = 0;
+        Core.currentJumpCount = 0;
     }
 }

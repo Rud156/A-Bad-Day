@@ -21,17 +21,17 @@ public class Dash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerData.stopPlayerMovement)
+        if (Core.stopPlayerMovement)
             return;
 
-        float currentDashes = PlayerData.currentDashesLeft;
-        float dashUseRate = PlayerData.dashUseRate;
+        float currentDashes = Core.currentDashesLeft;
+        float dashUseRate = Core.dashUseRate;
         if (
             (Input.GetKeyDown(ControlConstants.dashButtonKeyboard) || Input.GetKeyDown(ControlConstants.dashButtonJoystick))
             && currentDashes - dashUseRate >= 0
         )
         {
-            PlayerData.currentDashesLeft -= dashUseRate;
+            Core.currentDashesLeft -= dashUseRate;
             directionVector = gameObject.transform.forward;
             gameObject.transform.SetParent(null);
             target.AddForce(directionVector * dashSpeed, ForceMode.Impulse);

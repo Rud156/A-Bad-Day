@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerData : MonoBehaviour
+public class Core : MonoBehaviour
 {
 	public static int maxJumpCount = 2;
 	public static int currentJumpCount = 0;
@@ -20,6 +20,4 @@ public class PlayerData : MonoBehaviour
 	public static float dashUseRate = 1f;
 
 	public static bool stopPlayerMovement = false;
-
-	public static int collectedGlowingOrbs = 0;
 }

@@ -21,17 +21,17 @@ public class IncreaseDashCount : MonoBehaviour
         other.GetComponent<Animator>().enabled = true;
         other.GetComponent<PausePlayerTillEffectComplete>().StopPlayerMovement();
 
-        PlayerData.dashPortalsCollected += 1;
+        Core.dashPortalsCollected += 1;
         CheckCollectedCount();
     }
 
     private void CheckCollectedCount()
     {
-        int dashPortalsCollected = PlayerData.dashPortalsCollected;
-        if (dashPortalsCollected == PlayerData.maxDashPortalsForIncrease)
+        int dashPortalsCollected = Core.dashPortalsCollected;
+        if (dashPortalsCollected == Core.maxDashPortalsForIncrease)
         {
-            PlayerData.maxDashes += 1;
-            PlayerData.dashPortalsCollected = 0;
+            Core.maxDashes += 1;
+            Core.dashPortalsCollected = 0;
             displayBigText.text = UITextConstants.dashIncreased;
             displayBigText.color = Color.white;
             displaySmallText.text = UITextConstants.dashIncreasedSubText;

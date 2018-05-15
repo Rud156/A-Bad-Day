@@ -19,19 +19,19 @@ public class IncreaseHealthCount : MonoBehaviour
         other.GetComponent<Animator>().enabled = true;
         other.GetComponent<PausePlayerTillEffectComplete>().StopPlayerMovement();
 
-        PlayerData.healthPortalsCollected += 1;
+        Core.healthPortalsCollected += 1;
         CheckCollectedCount();
     }
 
     private void CheckCollectedCount()
     {
-        int healthPortalsCollected = PlayerData.healthPortalsCollected;
+        int healthPortalsCollected = Core.healthPortalsCollected;
 
-        if (healthPortalsCollected == PlayerData.maxHealthPortalsForIncrease)
+        if (healthPortalsCollected == Core.maxHealthPortalsForIncrease)
         {
-            PlayerData.healthPortalsCollected = 0;
-            PlayerData.maxHealth += 1;
-            PlayerData.currentHealthLeft += 1;
+            Core.healthPortalsCollected = 0;
+            Core.maxHealth += 1;
+            Core.currentHealthLeft += 1;
 
             displayBigText.text = UITextConstants.healthIncreased;
             displayBigText.color = Color.white;

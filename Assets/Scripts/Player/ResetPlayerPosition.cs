@@ -31,6 +31,6 @@ public class ResetPlayerPosition : MonoBehaviour
         target.velocity = Vector3.zero;
         target.transform.position = resetPosition;
         // target.transform.rotation = Quaternion.Euler(-90, 0, 0);
-        PlayerData.currentHealthLeft -= 1;
+        Core.currentHealthLeft -= 1;
     }
 }

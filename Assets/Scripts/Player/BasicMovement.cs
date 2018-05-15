@@ -19,7 +19,7 @@ public class BasicMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerData.stopPlayerMovement)
+        if (Core.stopPlayerMovement)
             return;
 
         float moveX = Input.GetAxis(ControlConstants.horizontalAxis);

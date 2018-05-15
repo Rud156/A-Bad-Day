@@ -9,7 +9,7 @@ public class PausePlayerTillEffectComplete : MonoBehaviour
 
     public void StopPlayerMovement()
     {
-        PlayerData.stopPlayerMovement = true;
+        Core.stopPlayerMovement = true;
         this.player.useGravity = false;
         this.player.velocity = Vector3.zero;
     }
@@ -19,7 +19,8 @@ public class PausePlayerTillEffectComplete : MonoBehaviour
     /// </summary>
     void OnDestroy()
     {
-        PlayerData.stopPlayerMovement = false;
-        this.player.useGravity = true;
+        Core.stopPlayerMovement = false;
+        if (this.player)
+            this.player.useGravity = true;
     }
 }
