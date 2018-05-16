@@ -22811,12 +22811,12 @@ Prefab:
     - target: {fileID: 198152464144274352, guid: a38c4cac76a51c140b0031203e139b77,
         type: 2}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 198152464144274352, guid: a38c4cac76a51c140b0031203e139b77,
         type: 2}
       propertyPath: randomSeed
-      value: -275206674
+      value: -1973984514
       objectReference: {fileID: 0}
     - target: {fileID: 1389435438699784, guid: a38c4cac76a51c140b0031203e139b77, type: 2}
       propertyPath: m_IsActive
@@ -26576,7 +26576,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1798016933
 RectTransform:
   m_ObjectHideFlags: 0
