@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class ResetPlayerPosition : MonoBehaviour
 {
-
+    [Header("Optional Parameters")]
     public Vector3 resetPosition = Vector3.zero;
+    public bool useCheckPoint = false;
+
 
     private Rigidbody target;
 
@@ -29,7 +31,10 @@ public class ResetPlayerPosition : MonoBehaviour
 
         gameObject.transform.SetParent(null);
         target.velocity = Vector3.zero;
-        target.transform.position = resetPosition;
+        if (!useCheckPoint)
+            target.transform.position = resetPosition;
+        else
+            target.transform.position = Core.currentCheckPoint;
         // target.transform.rotation = Quaternion.Euler(-90, 0, 0);
         Core.currentHealthLeft -= 1;
     }
