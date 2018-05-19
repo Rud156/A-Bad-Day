@@ -14,5 +14,8 @@ public class UITextConstants : MonoBehaviour
     public static string dashPortalCollected = "+1 Dash Portal";
     public static string dashPortalCollectedSubText = "Collect 1 more to increase dash ability";
 
-    public static string secondScreenTextAnimationName = "TextAnimation";
+    public static string secondSceneDashWallBreaker = "Dash Wall Breaker Ability";
+    public static string secondSceneDashWallBreakerSubText = "You can now break walls by dashing";
+
+    public static string screenTextAnimationName = "TextAnimation";
 }

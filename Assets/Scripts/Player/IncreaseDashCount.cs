@@ -44,6 +44,6 @@ public class IncreaseDashCount : MonoBehaviour
             displaySmallText.text = UITextConstants.dashPortalCollectedSubText;
             displaySmallText.color = Color.blue;
         }
-        textHolderAnimator.Play(UITextConstants.secondScreenTextAnimationName);
+        textHolderAnimator.Play(UITextConstants.screenTextAnimationName);
     }
 }
