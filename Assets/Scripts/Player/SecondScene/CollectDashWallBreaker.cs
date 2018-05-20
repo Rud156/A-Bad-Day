@@ -20,6 +20,7 @@ public class CollectDashWallBreaker : MonoBehaviour
         if (!other.CompareTag("DashWallBreakerCollectible"))
             return;
 
+        gameObject.transform.position = other.transform.position;
         other.GetComponent<Animator>().enabled = true;
         other.GetComponent<PausePlayerTillEffectComplete>().StopPlayerMovement();
 
