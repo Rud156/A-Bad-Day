@@ -740,7 +740,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 178238726}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.30000305, y: 2.59, z: -15.3}
+  m_LocalPosition: {x: 198.3, y: 2.59, z: -15.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 211892275}
@@ -17488,6 +17488,7 @@ GameObject:
   - component: {fileID: 1311990007}
   - component: {fileID: 1311990006}
   - component: {fileID: 1311990005}
+  - component: {fileID: 1311990004}
   m_Layer: 0
   m_Name: Ground (5)
   m_TagString: Untagged
@@ -17509,6 +17510,22 @@ Transform:
   m_Father: {fileID: 1377939898}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1311990004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1311990002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62338fcf5f9c7284dbbbb0bf058247d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minPlayerSpeed: 35
+  wallBreakParticles: {fileID: 1182173920712536, guid: 0ee99d610e07499449282a1de3807950,
+    type: 2}
+  smoothWallMaterial: {fileID: 2100000, guid: 82ee0e7f5605ec94e9b6c9b0c1d2f743, type: 2}
+  brokenWallMaterial: {fileID: 2100000, guid: f3e467385f30b1b4aa28ce30d33adc58, type: 2}
 --- !u!65 &1311990005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18452,7 +18469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &1489774844
 Light:
   m_ObjectHideFlags: 0
