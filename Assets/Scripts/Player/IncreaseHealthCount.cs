@@ -45,6 +45,6 @@ public class IncreaseHealthCount : MonoBehaviour
             displaySmallText.text = UITextConstants.healthPortalCollectedSubText;
             displaySmallText.color = Color.green;
         }
-        textHolderAnimator.Play(UITextConstants.secondScreenTextAnimationName);
+        textHolderAnimator.Play(UITextConstants.screenTextAnimationName);
     }
 }

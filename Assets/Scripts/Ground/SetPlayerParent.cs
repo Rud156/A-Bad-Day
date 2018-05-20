@@ -15,9 +15,7 @@ public class SetPlayerParent : MonoBehaviour
         GameObject player = other.gameObject;
         Rigidbody target = player.GetComponent<Rigidbody>();
         if (!target || !player.CompareTag("Player"))
-        {
             return;
-        }
 
         player.transform.SetParent(gameObject.transform.parent);
         Core.currentJumpCount = 0;
