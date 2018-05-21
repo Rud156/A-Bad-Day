@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SavePlayerCheckPoint : MonoBehaviour
+public class ActivateObjectOnTriggerPlayer : MonoBehaviour
 {
+    public MoveInOneDirection movementScript;
 
     /// <summary>
     /// OnTriggerEnter is called when the Collider other enters the trigger.
@@ -15,7 +16,6 @@ public class SavePlayerCheckPoint : MonoBehaviour
         if (!target || !other.CompareTag("Player"))
             return;
 
-        Core.currentCheckPoint = gameObject.transform.position + Vector3.up * 5;
-        gameObject.SetActive(false);
+        movementScript.enabled = true;
     }
 }

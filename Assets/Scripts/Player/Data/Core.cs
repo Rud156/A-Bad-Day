@@ -20,7 +20,7 @@ public class Core : MonoBehaviour
 	public static float dashUseRate = 1f;
 
 	public static bool stopPlayerMovement = false;
-	public static bool wallBreakCollected = false;
+	public static bool wallBreakCollected = true;
 	
 	public static Vector3 currentCheckPoint = new Vector3(3f, 4f, -11f);
 }
