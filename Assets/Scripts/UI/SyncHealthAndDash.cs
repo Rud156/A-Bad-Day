@@ -36,7 +36,7 @@ public class SyncHealthAndDash : MonoBehaviour
     void LateUpdate()
     {
         int maxHealth = Core.maxHealth;
-        int currentHealthLeft = Core.currentHealthLeft;
+        float currentHealthLeft = Core.currentHealthLeft;
         float healthRatio = (float)currentHealthLeft / maxHealth;
         if (healthRatio <= 0.5)
             healthFiller.color = Color.Lerp(minHealthColor, halfHealthColor, healthRatio * 2);

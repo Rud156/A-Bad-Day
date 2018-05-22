@@ -26,6 +26,11 @@ public class MoveInOneDirection : MonoBehaviour
     /// </summary>
     void Start()
     {
+        stopMoving = true;
+    }
+
+    public void ActivateMovement()
+    {
         stopMoving = false;
 
         switch (direction)
@@ -42,6 +47,11 @@ public class MoveInOneDirection : MonoBehaviour
                 startingAxisPosition = gameObject.transform.position.z;
                 break;
         }
+    }
+
+    public void DeactivateMovement()
+    {
+        stopMoving = true;
     }
 
     /// <summary>

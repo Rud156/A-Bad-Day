@@ -16,6 +16,6 @@ public class ActivateObjectOnTriggerPlayer : MonoBehaviour
         if (!target || !other.CompareTag("Player"))
             return;
 
-        movementScript.enabled = true;
+        movementScript.ActivateMovement();
     }
 }

@@ -16,10 +16,9 @@ public class UITextConstants : MonoBehaviour
     public static string screenTextAnimationName = "TextAnimation";
 
 
-
     /** 
     * SECOND SCREEN SPECIFIC STATIC STRINGS
-    **/ 
+    **/
     public static string secondSceneDashWallBreaker = "Dash Wall Breaker Ability";
     public static string secondSceneDashWallBreakerSubText = "You can now break walls by dashing into them";
     public static string secondScreenWallIdleAnimation = "WallIdleAnimation";

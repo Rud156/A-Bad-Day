@@ -8,7 +8,7 @@ public class Core : MonoBehaviour
 	public static int currentJumpCount = 0;
 
 	public static int maxHealth = 3;
-	public static int currentHealthLeft = 3;
+	public static float currentHealthLeft = 3;
 	public static int healthPortalsCollected = 0;
 	public static int maxHealthPortalsForIncrease =  2;
 

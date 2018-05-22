@@ -9,6 +9,7 @@ public class CrackWallOnDash : MonoBehaviour
 
     [Header("Wall Break Particles")]
     public GameObject wallBreakParticles;
+    public Vector3 wallBreakParticlesRotation = Vector3.zero;
 
     [Header("Wall Materials")]
     public Material smoothWallMaterial;
