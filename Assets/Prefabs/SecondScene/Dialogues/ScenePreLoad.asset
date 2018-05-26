@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: ScenePreLoad
   m_EditorClassIdentifier: 
   name: TIM
-  spriteImage: {fileID: 0}
+  spriteImage: {fileID: 2800000, guid: 20589ebcf23eefa4daa87331efae35b0, type: 3}
   nameColor: {r: 0.08235294, g: 0.16470589, b: 1, a: 1}
   sentences:
   - What is this?!!
