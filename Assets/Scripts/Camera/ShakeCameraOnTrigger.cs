@@ -11,6 +11,9 @@ public class ShakeCameraOnTrigger : MonoBehaviour
     public float fadeInTime = 0.1f;
     public float fadeOutTime = 2;
 
+    public delegate void OnCameraShakeEnd();
+    public OnCameraShakeEnd onCameraShakeEndCallback;
+
     /// <summary>
     /// OnTriggerEnter is called when the Collider other enters the trigger.
     /// </summary>
@@ -22,6 +25,10 @@ public class ShakeCameraOnTrigger : MonoBehaviour
             return;
 
         CameraShaker.Instance.ShakeOnce(magnitude, roughness, fadeInTime, fadeOutTime);
-		gameObject.SetActive(false);
+
+        if (onCameraShakeEndCallback != null)
+            onCameraShakeEndCallback.Invoke();
+
+        gameObject.SetActive(false);
     }
 }
