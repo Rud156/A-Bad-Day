@@ -1630,6 +1630,7 @@ GameObject:
   - component: {fileID: 178238740}
   - component: {fileID: 178238738}
   - component: {fileID: 178238739}
+  - component: {fileID: 178238742}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1643,7 +1644,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 178238726}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c09661adcd6d58449acef17948cc5303, type: 3}
   m_Name: 
@@ -1656,7 +1657,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 178238726}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6447938d29e2dad489f3e7f3bb8c4aeb, type: 3}
   m_Name: 
@@ -1669,7 +1670,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 178238726}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c01a0f783666ea440af111589a516efb, type: 3}
   m_Name: 
@@ -1757,9 +1758,9 @@ Rigidbody:
   m_Drag: 2
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 0
   m_CollisionDetection: 2
 --- !u!114 &178238735
 MonoBehaviour:
@@ -1767,7 +1768,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 178238726}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9d571725357c344c8bfbde76854c3d2, type: 3}
   m_Name: 
@@ -1808,7 +1809,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 178238726}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab94b1d337521c6478620a1d8c8deab6, type: 3}
   m_Name: 
@@ -1859,6 +1860,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &178238742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 178238726}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c03803acd2d9641a13b4ab77ef7c84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &184024174
 GameObject:
   m_ObjectHideFlags: 0
