@@ -6,9 +6,13 @@ using UnityEngine.Playables;
 public class DisablePlayerControlsAndEnableDirector : MonoBehaviour
 {
 
+    public GameObject player;
     public PlayableDirector director;
+    public bool deactivateObjectAfterComplete = true;
 
     private bool playStarted;
+    private Rigidbody target;
+    private bool onTriggerCalled;
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
@@ -16,7 +20,9 @@ public class DisablePlayerControlsAndEnableDirector : MonoBehaviour
     /// </summary>
     void Start()
     {
+        onTriggerCalled = false;
         playStarted = false;
+        target = player.GetComponent<Rigidbody>();
     }
 
     /// <summary>
@@ -24,11 +30,21 @@ public class DisablePlayerControlsAndEnableDirector : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if (director.state == PlayState.Playing)
+        if (target.transform.parent == gameObject.transform.parent && !playStarted && onTriggerCalled)
+        {
+            target.isKinematic = true;
+            director.Play();
             playStarted = true;
+        }
 
         if (director.state != PlayState.Playing && playStarted)
+        {
             Core.stopPlayerMovement = false;
+            target.isKinematic = false;
+
+            if (deactivateObjectAfterComplete)
+                gameObject.SetActive(false);
+        }
     }
 
     /// <summary>
@@ -42,6 +58,7 @@ public class DisablePlayerControlsAndEnableDirector : MonoBehaviour
             return;
 
         Core.stopPlayerMovement = true;
-        director.Play();
+        target.velocity = Vector3.zero;
+        onTriggerCalled = true;
     }
 }

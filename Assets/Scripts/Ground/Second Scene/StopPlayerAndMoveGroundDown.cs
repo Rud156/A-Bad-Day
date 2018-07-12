@@ -12,6 +12,7 @@ public class StopPlayerAndMoveGroundDown : MonoBehaviour
     public float movementSpeed;
     public float movementAmount;
     public bool isPositive = false;
+    public bool activateOnStart = false;
 
     private bool stopMovement;
     private List<float> endYPosition;
@@ -26,7 +27,7 @@ public class StopPlayerAndMoveGroundDown : MonoBehaviour
         endYPosition = new List<float>();
         positionReached = new List<bool>();
 
-        stopMovement = true;
+        stopMovement = !activateOnStart;
 
         foreach (GameObject ground in grounds)
         {

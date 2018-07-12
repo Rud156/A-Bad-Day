@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SavePlayerCheckPoint : MonoBehaviour
 {
+    public bool deactivateObjectAfterTrigger = true;
 
     /// <summary>
     /// OnTriggerEnter is called when the Collider other enters the trigger.
@@ -16,6 +17,7 @@ public class SavePlayerCheckPoint : MonoBehaviour
             return;
 
         Core.currentCheckPoint = gameObject.transform.position + Vector3.up * 5;
-        gameObject.SetActive(false);
+        if (deactivateObjectAfterTrigger)
+            gameObject.SetActive(false);
     }
 }
