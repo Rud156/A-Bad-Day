@@ -5399,7 +5399,7 @@ Transform:
   - {fileID: 1350517326}
   - {fileID: 2036056556}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &553732648
 GameObject:
@@ -5644,6 +5644,7 @@ GameObject:
   - component: {fileID: 570667289}
   - component: {fileID: 570667292}
   - component: {fileID: 570667291}
+  - component: {fileID: 570667290}
   m_Layer: 0
   m_Name: CheckPoint
   m_TagString: Untagged
@@ -5664,6 +5665,18 @@ Transform:
   m_Father: {fileID: 64814065}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &570667290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 570667288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 834664988b19057408307f221b61de0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  director: {fileID: 1589304129}
 --- !u!114 &570667291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10958,6 +10971,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 823311919}
+  - component: {fileID: 823311920}
   m_Layer: 0
   m_Name: Pre Scene Start Holder
   m_TagString: Untagged
@@ -10998,6 +11012,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &823311920
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 823311918}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 228d7f59fe4bb5d48b8c835460b13020, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &853373303
 GameObject:
   m_ObjectHideFlags: 0
@@ -22215,7 +22246,7 @@ GameObject:
   - component: {fileID: 1272805668}
   - component: {fileID: 1272805669}
   m_Layer: 0
-  m_Name: Scene Start
+  m_Name: Scene Start Director
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22232,7 +22263,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!320 &1272805669
 PlayableDirector:
@@ -25009,6 +25040,71 @@ Transform:
   m_PrefabParentObject: {fileID: 4120242981162882, guid: 3d90ea932c517514b96881194ef925db,
     type: 2}
   m_PrefabInternal: {fileID: 1573290615}
+--- !u!1 &1589304127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1589304130}
+  - component: {fileID: 1589304129}
+  - component: {fileID: 1589304128}
+  m_Layer: 0
+  m_Name: Pre Scene Start Director
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!95 &1589304128
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1589304127}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!320 &1589304129
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1589304127}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: ebba053d6ea478045a0ab37f44ed3d9e, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114257883905683942, guid: ebba053d6ea478045a0ab37f44ed3d9e, type: 2}
+    value: {fileID: 1589304127}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &1589304130
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1589304127}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1599382091
 Prefab:
   m_ObjectHideFlags: 0
