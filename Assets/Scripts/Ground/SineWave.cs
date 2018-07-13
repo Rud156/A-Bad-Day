@@ -23,7 +23,7 @@ public class SineWave : MonoBehaviour
 
     void Start()
     {
-        ComputeStartAndEndPositions();
+        ComputeStartAndEndPositions(gameObject.transform.position);
     }
 
     void Update()
@@ -32,9 +32,9 @@ public class SineWave : MonoBehaviour
             Mathf.PingPong(Time.time / duration, 1));
     }
 
-    void ComputeStartAndEndPositions()
+    void ComputeStartAndEndPositions(Vector3 newStartPosition)
     {
-        startPosition = gameObject.transform.position;
+        startPosition = newStartPosition;
         switch (direction)
         {
             case Direction.xAxis:
@@ -57,16 +57,8 @@ public class SineWave : MonoBehaviour
         return startPosition;
     }
 
-    public Vector3 GetEndPosition()
+    public void ReComputeStartAndEndPositions(Vector3 newStartPosition)
     {
-        return endPosition;
-    }
-
-    public void ReComputeStartAndEndPositions(Vector3 newStartPosition, Vector3 newEndPosition)
-    {
-        startPosition = newStartPosition;
-        endPosition = newEndPosition;
-
-        ComputeStartAndEndPositions();
+        ComputeStartAndEndPositions(newStartPosition);
     }
 }

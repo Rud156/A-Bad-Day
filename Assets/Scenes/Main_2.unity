@@ -1809,6 +1809,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitForTime: 4
   fallDistance: 5
+  player: {fileID: 178238726}
 --- !u!114 &136365434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22339,6 +22340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitForTime: 4
   fallDistance: 5
+  player: {fileID: 178238726}
 --- !u!114 &1259061770
 MonoBehaviour:
   m_ObjectHideFlags: 0

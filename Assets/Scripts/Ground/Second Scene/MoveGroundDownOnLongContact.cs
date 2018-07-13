@@ -9,6 +9,9 @@ public class MoveGroundDownOnLongContact : MonoBehaviour
     public float waitForTime = 4f;
     public float fallDistance = 5f;
 
+    [Header("Player")]
+    public GameObject player;
+
     private bool coroutinePlayed;
     private SineWave sineWave;
     private ShakeCameraWhenCalled shakeCameraWhenCalled;
@@ -59,30 +62,18 @@ public class MoveGroundDownOnLongContact : MonoBehaviour
 
     IEnumerator StartCountDownTimer()
     {
-        print("Starting Timer");
-
         coroutinePlayed = true;
         yield return new WaitForSeconds(waitForTime);
 
-        print("Timer Finished");
+        player.transform.SetParent(null);
 
         if (sineWave != null)
         {
             Vector3 currentStartPosition = sineWave.GetStartPosition();
-            Vector3 currentEndPosition = sineWave.GetEndPosition();
-
-            print(currentEndPosition);
-            print(currentStartPosition);
-
-            print("After Modifying");
 
             currentStartPosition += Vector3.down * fallDistance;
-            currentEndPosition += Vector3.down * fallDistance;
 
-            print(currentEndPosition);
-            print(currentStartPosition);
-
-            sineWave.ReComputeStartAndEndPositions(currentStartPosition, currentEndPosition);
+            sineWave.ReComputeStartAndEndPositions(currentStartPosition);
             shakeCameraWhenCalled.StartShaking();
         }
         else
@@ -93,9 +84,7 @@ public class MoveGroundDownOnLongContact : MonoBehaviour
             gameObject.transform.parent.position = currentPosition;
         }
 
-
-        print("Re Computation Complete");
-
         coroutinePlayed = false;
+        startCountDownTimerCoroutine = StartCoroutine(StartCountDownTimer());
     }
 }
