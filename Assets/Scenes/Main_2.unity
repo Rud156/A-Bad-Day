@@ -1705,6 +1705,8 @@ GameObject:
   - component: {fileID: 136365431}
   - component: {fileID: 136365430}
   - component: {fileID: 136365429}
+  - component: {fileID: 136365434}
+  - component: {fileID: 136365433}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -1794,6 +1796,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 136365427}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &136365433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 136365427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f1b91162364d0418e109bf716dc219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitForTime: 4
+  fallDistance: 5
+--- !u!114 &136365434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 136365427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9da7530341e25046b7e8b667c411833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magnitude: 4
+  roughness: 3
+  fadeInTime: 0.5
+  fadeOutTime: 3
+  totalShakeTime: 0.5
 --- !u!1001 &143913076
 Prefab:
   m_ObjectHideFlags: 0
@@ -2019,7 +2050,6 @@ GameObject:
   - component: {fileID: 178238738}
   - component: {fileID: 178238739}
   - component: {fileID: 178238742}
-  - component: {fileID: 178238743}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2129,7 +2159,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 178238726}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.70710677}
-  m_LocalPosition: {x: -72.10839, y: 1.25, z: 0.04}
+  m_LocalPosition: {x: -1.7, y: 2.8, z: 0.04}
   m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_Children:
   - {fileID: 300043722}
@@ -2255,20 +2285,9 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 178238726}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47c03803acd2d9641a13b4ab77ef7c84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &178238743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 178238726}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f08f9ec529a9b4c4cb778f0b2a0bd190, type: 3}
+  m_Script: {fileID: 11500000, guid: 47c03803acd2d9641a13b4ab77ef7c84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &184024174
@@ -5817,7 +5836,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &570667289
 Transform:
   m_ObjectHideFlags: 0
@@ -11148,7 +11167,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &823311919
 Transform:
   m_ObjectHideFlags: 0
@@ -22216,6 +22235,8 @@ GameObject:
   - component: {fileID: 1259061767}
   - component: {fileID: 1259061766}
   - component: {fileID: 1259061765}
+  - component: {fileID: 1259061770}
+  - component: {fileID: 1259061769}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -22305,6 +22326,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1259061763}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1259061769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1259061763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f1b91162364d0418e109bf716dc219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitForTime: 4
+  fallDistance: 5
+--- !u!114 &1259061770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1259061763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9da7530341e25046b7e8b667c411833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magnitude: 4
+  roughness: 3
+  fadeInTime: 0.5
+  fadeOutTime: 3
+  totalShakeTime: 0.5
 --- !u!1001 &1262434986
 Prefab:
   m_ObjectHideFlags: 0
@@ -22426,7 +22476,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1272805668
 Transform:
   m_ObjectHideFlags: 0
@@ -25249,7 +25299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!320 &1589304128
 PlayableDirector:
   m_ObjectHideFlags: 0
