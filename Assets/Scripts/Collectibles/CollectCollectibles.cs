@@ -9,6 +9,11 @@ public class CollectCollectibles : MonoBehaviour
     public int collectibleScore = 20;
     public GameObject collectibleCollectEffect;
 
+    [Header("Randomization")]
+    public bool useRandomScore = false;
+    public int minscore = 10;
+    public int maxScore = 100;
+
     [Header("Destory Parent Also")]
     public bool destroyParent = false;
 
@@ -22,6 +27,14 @@ public class CollectCollectibles : MonoBehaviour
         Rigidbody target = other.GetComponent<Rigidbody>();
         if (!target || !other.CompareTag("Player"))
             return;
+
+        int score;
+        if (useRandomScore)
+            score = Random.Range(minscore, maxScore);
+        else
+            score = collectibleScore;
+
+        SecondScene.collectibleScore += score;
 
         Instantiate(collectibleCollectEffect, other.transform.position,
             collectibleCollectEffect.transform.rotation);
