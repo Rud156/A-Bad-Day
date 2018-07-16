@@ -10,6 +10,7 @@ TagManager:
   - ResetGround
   - PowerupCollectible
   - DashWallBreakerCollectible
+  - LastGround
   layers:
   - Default
   - TransparentFX
