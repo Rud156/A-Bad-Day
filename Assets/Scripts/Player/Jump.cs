@@ -23,7 +23,8 @@ public class Jump : MonoBehaviour
         if (Core.stopPlayerMovement)
             return;
 
-        if (Input.GetKeyDown(ControlConstants.jumpButtonKeyboard) || Input.GetKeyDown(ControlConstants.jumpButtonJoystick))
+        if (Input.GetKeyDown(ControlConstants.jumpButtonKeyboard) || 
+            Input.GetKeyDown(ControlConstants.jumpButtonJoystick))
             jumpRequest = true;
     }
 

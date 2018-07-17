@@ -13,6 +13,6 @@ public class EnemyStats : MonoBehaviour
     public static float health = 100;
 
     public static string orb = "Orb";
-    public static float orbDamage = 10f;
-
+    public static float minOrbDamage = 3f;
+    public static float maxOrbDamage = 10f;
 }

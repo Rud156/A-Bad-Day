@@ -14,14 +14,12 @@ public class TakeEnemyParticleDamage : MonoBehaviour
     void OnParticleCollision(GameObject other)
     {
         ParticleSystem particles = other.GetComponent<ParticleSystem>();
-        print("Collision Occurred");
 
         if (!particles || !other.CompareTag("Enemy"))
             return;
 
         List<ParticleCollisionEvent> collisionEvents = new List<ParticleCollisionEvent>();
         int collisionCount = particles.GetCollisionEvents(gameObject, collisionEvents);
-        print("Total Collisions: " + collisionCount);
 
         foreach (var item in collisionEvents)
             Core.currentHealthLeft -= enemyAttackDamage;

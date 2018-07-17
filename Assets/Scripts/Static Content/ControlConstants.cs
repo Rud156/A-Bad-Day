@@ -10,4 +10,6 @@ public class ControlConstants : MonoBehaviour
     public static string dashButtonJoystick = "joystick button 2";
     public static string jumpButtonKeyboard = "space";
     public static string jumpButtonJoystick = "joystick button 0";
+    public static string orbLaunchKeyboard = "q";
+    public static string orbLaunchJoystick = "joystick button 1";
 }

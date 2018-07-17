@@ -52,7 +52,12 @@ public class DamageEnemyOnContact : MonoBehaviour
             EnemyStats.health -= damageAmount;
         }
         else
-            EnemyStats.health -= EnemyStats.orbDamage;
+        {
+            float randomDamageAmount = Random.Range(EnemyStats.minOrbDamage,
+                EnemyStats.maxOrbDamage);
+            EnemyStats.health -= randomDamageAmount;
+            Destroy(other.gameObject);
+        }
     }
 
 }
