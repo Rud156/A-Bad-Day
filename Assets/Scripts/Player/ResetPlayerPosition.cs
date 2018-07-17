@@ -35,7 +35,5 @@ public class ResetPlayerPosition : MonoBehaviour
             target.transform.position = resetPosition;
         else
             target.transform.position = Core.currentCheckPoint;
-        // target.transform.rotation = Quaternion.Euler(-90, 0, 0);
-        Core.currentHealthLeft -= 1;
     }
 }

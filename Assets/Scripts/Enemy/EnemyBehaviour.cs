@@ -15,6 +15,9 @@ public class EnemyBehaviour : MonoBehaviour
     [Header("Effect Location")]
     public float heightBelowEnemyCenter = 2f;
 
+    [Header("Player")]
+    public GameObject player;
+
     private int timeBetweenEffects;
     private JumpOnPlayer jumpOnPlayer;
     private Rigidbody target;
@@ -22,7 +25,7 @@ public class EnemyBehaviour : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        timeBetweenEffects = 5;
+        timeBetweenEffects = 3;
         jumpOnPlayer = gameObject.GetComponent<JumpOnPlayer>();
         target = gameObject.GetComponent<Rigidbody>();
 
@@ -42,22 +45,22 @@ public class EnemyBehaviour : MonoBehaviour
 
             if (currentHealth >= 50)
             {
-                timeBetweenEffects = 5;
+                timeBetweenEffects = 3;
                 int randomState = Random.Range(0, 100) % 2;
                 yield return StartCoroutine(PlayRandomEffect(randomState, position));
             }
             else if (currentHealth >= 25 && currentHealth < 50)
             {
-                timeBetweenEffects = 3;
+                timeBetweenEffects = 2;
                 int randomState = Random.Range(0, 100) % 3;
-                yield return StartCoroutine(PlayRandomEffect(randomState, position, 0.5f));
+                yield return StartCoroutine(PlayRandomEffect(randomState, position, 0.7f));
             }
             else if (currentHealth > 0)
             {
                 timeBetweenEffects = 1;
                 int randomState = Random.Range(0, 100) % 2;
                 randomState += 1;
-                yield return StartCoroutine(PlayRandomEffect(randomState, position, 0.7f));
+                yield return StartCoroutine(PlayRandomEffect(randomState, position, 0.9f));
             }
             else
                 break;
@@ -65,16 +68,25 @@ public class EnemyBehaviour : MonoBehaviour
             yield return null;
         }
 
-        Instantiate(destroyEnemyEffect, gameObject.transform.position,
-            destroyEnemyEffect.transform.rotation);
-        Destroy(gameObject);
+        if (EnemyStats.health <= 0)
+        {
+            Instantiate(destroyEnemyEffect, gameObject.transform.position,
+                destroyEnemyEffect.transform.rotation);
+            Destroy(gameObject);
+        }
     }
 
-    IEnumerator PlayRandomEffect(int randomState, Vector3 position, float arcSpeed = 0.3f)
+    IEnumerator PlayRandomEffect(int randomState, Vector3 position, float arcSpeed = 0.5f)
     {
         if (randomState == 0)
-            Instantiate(firstEffect,
+        {
+            GameObject instantiatedFirstEffect = Instantiate(firstEffect,
                 position + Vector3.down * heightBelowEnemyCenter, firstEffect.transform.rotation);
+            ParticleSystem instantiatedParticles = instantiatedFirstEffect.GetComponent<ParticleSystem>();
+            ParticleSystem.CollisionModule collision = instantiatedParticles.collision;
+            collision.SetPlane(0, player.transform);
+        }
+
         else if (randomState == 1)
         {
             GameObject instantiatedSecondEffect = Instantiate(secondEffect,
@@ -82,6 +94,8 @@ public class EnemyBehaviour : MonoBehaviour
             ParticleSystem instantiatedParticles = instantiatedSecondEffect.GetComponent<ParticleSystem>();
             ParticleSystem.ShapeModule shape = instantiatedParticles.shape;
             shape.arcSpeed = arcSpeed;
+            ParticleSystem.CollisionModule collision = instantiatedParticles.collision;
+            collision.SetPlane(0, player.transform);
             yield return new WaitForSeconds(secondEffectPlayTime);
             Destroy(instantiatedSecondEffect);
         }

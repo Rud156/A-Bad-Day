@@ -58,6 +58,9 @@ public class JumpOnPlayer : MonoBehaviour
         GameObject effect = Instantiate(landEffect, instantiationPosition,
             landEffect.transform.rotation);
         effect.transform.SetParent(gameObject.transform.parent);
+        ParticleSystem instantiatedParticles = effect.GetComponent<ParticleSystem>();
+        ParticleSystem.CollisionModule collision = instantiatedParticles.collision;
+        collision.SetPlane(0, player.transform);
 
         EnemyStats.isJumping = false;
         target.isKinematic = true;
