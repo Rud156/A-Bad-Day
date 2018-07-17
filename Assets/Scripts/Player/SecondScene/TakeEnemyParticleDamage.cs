@@ -5,7 +5,8 @@ using UnityEngine;
 public class TakeEnemyParticleDamage : MonoBehaviour
 {
 
-    public float enemyAttackDamage = 0.5f;
+    public float minEnemyAttackDamage = 0.5f;
+    public float maxEnemyAttackDamage = 1f;
 
     /// <summary>
     /// OnParticleCollision is called when a particle hits a collider.
@@ -19,9 +20,12 @@ public class TakeEnemyParticleDamage : MonoBehaviour
             return;
 
         List<ParticleCollisionEvent> collisionEvents = new List<ParticleCollisionEvent>();
-        int collisionCount = particles.GetCollisionEvents(gameObject, collisionEvents);
+        particles.GetCollisionEvents(gameObject, collisionEvents);
 
         foreach (var item in collisionEvents)
-            Core.currentHealthLeft -= enemyAttackDamage;
+        {
+            float randomDamage = Random.Range(minEnemyAttackDamage, maxEnemyAttackDamage);
+            Core.currentHealthLeft -= randomDamage;
+        }
     }
 }

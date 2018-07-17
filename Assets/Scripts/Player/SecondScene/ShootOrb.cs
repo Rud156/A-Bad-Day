@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
 public class ShootOrb : MonoBehaviour
 {
 
@@ -19,11 +18,16 @@ public class ShootOrb : MonoBehaviour
         if (Input.GetKeyDown(ControlConstants.orbLaunchKeyboard) ||
             Input.GetKeyDown(ControlConstants.orbLaunchJoystick))
         {
+            if (SecondScene.collectedGlowingOrbs <= 0)
+                return;
+
             Vector3 launchPosition = launcher.transform.position;
             GameObject instantiatedOrb = Instantiate(orbToShoot, launchPosition,
                 orbToShoot.transform.rotation);
             Rigidbody orbRigidbody = instantiatedOrb.GetComponent<Rigidbody>();
             orbRigidbody.velocity = gameObject.transform.forward * movementVelocity * Time.deltaTime;
+
+            SecondScene.collectedGlowingOrbs -= 1;
         }
     }
 }
