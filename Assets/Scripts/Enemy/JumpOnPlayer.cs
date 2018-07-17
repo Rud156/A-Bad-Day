@@ -31,16 +31,6 @@ public class JumpOnPlayer : MonoBehaviour
     }
 
     /// <summary>
-    /// Update is called every frame, if the MonoBehaviour is enabled.
-    /// </summary>
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-            TriggerJump();
-
-    }
-
-    /// <summary>
     /// OnCollisionEnter is called when this collider/rigidbody has begun
     /// touching another rigidbody/collider.
     /// </summary>
@@ -68,11 +58,15 @@ public class JumpOnPlayer : MonoBehaviour
         GameObject effect = Instantiate(landEffect, instantiationPosition,
             landEffect.transform.rotation);
         effect.transform.SetParent(gameObject.transform.parent);
+
         EnemyStats.isJumping = false;
+        target.isKinematic = true;
     }
 
     public void TriggerJump()
     {
+        target.isKinematic = false;
+
         if (EnemyStats.isJumping)
             return;
 
