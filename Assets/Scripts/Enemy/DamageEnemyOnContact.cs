@@ -45,7 +45,7 @@ public class DamageEnemyOnContact : MonoBehaviour
             return;
 
         string otherTag = other.gameObject.tag;
-        if (tag == "Player")
+        if (otherTag == "Player")
         {
             float collisionVelocity = other.relativeVelocity.magnitude;
             float damageAmount = collisionVelocity * damageConstant;
