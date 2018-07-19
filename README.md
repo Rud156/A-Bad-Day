@@ -1,6 +1,3 @@
-# OnceUponATime
-An Adventure Game
-
-### Parts
-- [X] Part 1 - Intro
-- [ ] Part 2- Basic Exploration and Control Scheme
+# One Day
+#### An single level game where the only objective is to reach the end.
+#### Try to get as high a score as possible.
