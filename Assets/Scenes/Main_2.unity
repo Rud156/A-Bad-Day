@@ -2724,8 +2724,8 @@ MonoBehaviour:
   textHolderAnimator: {fileID: 582623616}
   displaySmallText: {fileID: 338298191}
   displayBigText: {fileID: 215359445}
-  minEnemyAttackDamage: 1
-  maxEnemyAttackDamage: 10
+  minEnemyAttackDamage: 7
+  maxEnemyAttackDamage: 15
   fadeOut: {fileID: 330473586}
 --- !u!114 &178238744
 MonoBehaviour:
@@ -6567,7 +6567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &537296965
 Transform:
   m_ObjectHideFlags: 0
@@ -25980,7 +25980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08969ec736e8b0648a90feb9bc8032a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageConstant: 0.3
+  damageConstant: 0.1
   minCollisionVelocity: 20
   healthSlider: {fileID: 1696353428}
   healthFiller: {fileID: 1696353427}
