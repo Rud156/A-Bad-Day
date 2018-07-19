@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11946467, g: 0.3971673, b: 0.315982, a: 1}
+  m_IndirectSpecularColor: {r: 0.119464524, g: 0.39716557, b: 0.31598175, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1720,7 +1720,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4120242981162882, guid: 3d90ea932c517514b96881194ef925db, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 26.86
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4120242981162882, guid: 3d90ea932c517514b96881194ef925db, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3125,7 +3125,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4120242981162882, guid: 3d90ea932c517514b96881194ef925db, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 37.2
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4120242981162882, guid: 3d90ea932c517514b96881194ef925db, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6036,7 +6036,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4120242981162882, guid: 3d90ea932c517514b96881194ef925db, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 17.1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4120242981162882, guid: 3d90ea932c517514b96881194ef925db, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6378,7 +6378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &526449659
 Transform:
   m_ObjectHideFlags: 0
@@ -13693,7 +13693,7 @@ MonoBehaviour:
   wallBreakParticles: {fileID: 1182173920712536, guid: 0ee99d610e07499449282a1de3807950,
     type: 2}
   wallBreakParticlesRotation: {x: 0, y: 0, z: 0}
-  smoothWallMaterial: {fileID: 2100000, guid: 82ee0e7f5605ec94e9b6c9b0c1d2f743, type: 2}
+  smoothWallMaterial: {fileID: 2100000, guid: a03045b354312b64187195f467033061, type: 2}
   brokenWallMaterial: {fileID: 2100000, guid: f3e467385f30b1b4aa28ce30d33adc58, type: 2}
 --- !u!65 &920880388
 BoxCollider:
@@ -13723,7 +13723,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 82ee0e7f5605ec94e9b6c9b0c1d2f743, type: 2}
+  - {fileID: 2100000, guid: a03045b354312b64187195f467033061, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23005,6 +23005,7 @@ GameObject:
   - component: {fileID: 1147438368}
   - component: {fileID: 1147438369}
   - component: {fileID: 1147438370}
+  - component: {fileID: 1147438371}
   m_Layer: 0
   m_Name: Ground Fall
   m_TagString: Untagged
@@ -23054,6 +23055,21 @@ MonoBehaviour:
   movementAmount: 20
   isPositive: 0
   activateOnStart: 0
+--- !u!114 &1147438371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147438367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4765deb8cc4c364c8a158f801c272e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magnitude: 4
+  roughness: 7
+  fadeInTime: 0.1
+  fadeOutTime: 7
 --- !u!1001 &1157581325
 Prefab:
   m_ObjectHideFlags: 0
@@ -24503,7 +24519,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: de2ced7f0b9073b4aa41914651b42722, type: 2}
-  m_InitialState: 0
+  m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -25023,7 +25039,7 @@ MonoBehaviour:
   wallBreakParticles: {fileID: 1182173920712536, guid: 0ee99d610e07499449282a1de3807950,
     type: 2}
   wallBreakParticlesRotation: {x: 0, y: 0, z: 0}
-  smoothWallMaterial: {fileID: 2100000, guid: 82ee0e7f5605ec94e9b6c9b0c1d2f743, type: 2}
+  smoothWallMaterial: {fileID: 2100000, guid: a03045b354312b64187195f467033061, type: 2}
   brokenWallMaterial: {fileID: 2100000, guid: f3e467385f30b1b4aa28ce30d33adc58, type: 2}
 --- !u!65 &1311990005
 BoxCollider:
@@ -25053,7 +25069,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 82ee0e7f5605ec94e9b6c9b0c1d2f743, type: 2}
+  - {fileID: 2100000, guid: a03045b354312b64187195f467033061, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25949,7 +25965,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4120242981162882, guid: 3d90ea932c517514b96881194ef925db, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 8.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4120242981162882, guid: 3d90ea932c517514b96881194ef925db, type: 2}
       propertyPath: m_LocalPosition.z
@@ -27194,7 +27210,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4120242981162882, guid: 3d90ea932c517514b96881194ef925db, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 37.2
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4120242981162882, guid: 3d90ea932c517514b96881194ef925db, type: 2}
       propertyPath: m_LocalPosition.z
@@ -27551,7 +27567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1548765393
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31615,9 +31631,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2064402184}
-  - component: {fileID: 2064402185}
+  - component: {fileID: 2064402186}
   m_Layer: 0
-  m_Name: Activate Director
+  m_Name: Activate Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31636,7 +31652,7 @@ Transform:
   m_Father: {fileID: 1441399988}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2064402185
+--- !u!114 &2064402186
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -31644,10 +31660,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2064402183}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9298794666350b8478645a4b70d302a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 1eef66a6636fca744b1e8af756fd0cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  director: {fileID: 1272805669}
+  objectToActivate: {fileID: 526449658}
 --- !u!1 &2076972736
 GameObject:
   m_ObjectHideFlags: 0
@@ -32079,7 +32095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magnitude: 5
-  roughness: 5
+  roughness: 2
   fadeInTime: 0.5
   fadeOutTime: 2
   totalShakeTime: 3
