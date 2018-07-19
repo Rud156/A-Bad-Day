@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(JumpOnPlayer))]
 public class EnemyBehaviour : MonoBehaviour
@@ -17,6 +18,11 @@ public class EnemyBehaviour : MonoBehaviour
 
     [Header("Player")]
     public GameObject player;
+
+    [Header("Text Details")]
+    public Animator textHolderAnimator;
+    public Text displaySmallText;
+    public Text displayBigText;
 
     private int timeBetweenEffects;
     private JumpOnPlayer jumpOnPlayer;
@@ -77,6 +83,12 @@ public class EnemyBehaviour : MonoBehaviour
         {
             Instantiate(destroyEnemyEffect, gameObject.transform.position,
                 destroyEnemyEffect.transform.rotation);
+
+            displayBigText.text = "Boom!";
+            displayBigText.color = Color.green;
+            displaySmallText.text = "Enemy defeated";
+            textHolderAnimator.Play(UITextConstants.screenTextAnimationName);
+
             Destroy(gameObject);
         }
     }

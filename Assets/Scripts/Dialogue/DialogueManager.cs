@@ -28,12 +28,8 @@ public class DialogueManager : MonoBehaviour
     public DialogueObject[] dialogueObjects;
     public float waitTimeAfterDialogue = 2;
 
-
-    private bool sentenceDisplayCompleted;
-
     void Start()
     {
-        sentenceDisplayCompleted = true;
         StartCoroutine(StartDialogue());
     }
 
@@ -52,10 +48,8 @@ public class DialogueManager : MonoBehaviour
                 dialogueObject.dialogueSpeaker.GetComponent<FastObjectJump>().ResetAndPlayJump();
 
             foreach (string line in dialogueObject.dialogue.sentences)
-            {
-                StartCoroutine(TypeSentence(line));
-                yield return new WaitUntil(() => sentenceDisplayCompleted);
-            }
+                yield return StartCoroutine(TypeSentence(line));
+
             yield return null;
         }
 
@@ -65,7 +59,6 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator TypeSentence(string sentence)
     {
-        sentenceDisplayCompleted = false;
         dialogueText.text = "";
         foreach (var letter in sentence)
         {
@@ -74,7 +67,6 @@ public class DialogueManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(waitTimeAfterDialogue);
-        sentenceDisplayCompleted = true;
     }
 
     private void EndDialogue()

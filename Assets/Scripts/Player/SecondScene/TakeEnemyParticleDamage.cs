@@ -1,10 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(BoxCollider))]
 public class TakeEnemyParticleDamage : MonoBehaviour
 {
+    [Header("Text Details")]
+    public Animator textHolderAnimator;
+    public Text displaySmallText;
+    public Text displayBigText;
 
+    [Header("Enemy Damage Stats")]
     public float minEnemyAttackDamage = 0.5f;
     public float maxEnemyAttackDamage = 1f;
 
@@ -26,6 +34,17 @@ public class TakeEnemyParticleDamage : MonoBehaviour
         {
             float randomDamage = Random.Range(minEnemyAttackDamage, maxEnemyAttackDamage);
             Core.currentHealthLeft -= randomDamage;
+        }
+
+        if (Core.currentHealthLeft <= 0)
+        {
+            Core.stopPlayerMovement = true;
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+            gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            displayBigText.text = "0 Health";
+            displayBigText.color = Color.red;
+            displaySmallText.text = "You were defeated";
+            textHolderAnimator.Play(UITextConstants.screenTextAnimationName);
         }
     }
 }
