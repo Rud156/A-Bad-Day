@@ -16,6 +16,9 @@ public class TakeEnemyParticleDamage : MonoBehaviour
     public float minEnemyAttackDamage = 0.5f;
     public float maxEnemyAttackDamage = 1f;
 
+    [Header("Fader")]
+    public GameObject fadeOut;
+
     /// <summary>
     /// OnParticleCollision is called when a particle hits a collider.
     /// </summary>
@@ -45,6 +48,7 @@ public class TakeEnemyParticleDamage : MonoBehaviour
             displayBigText.color = Color.red;
             displaySmallText.text = "You were defeated";
             textHolderAnimator.Play(UITextConstants.screenTextAnimationName);
+            fadeOut.SetActive(true);
         }
     }
 }

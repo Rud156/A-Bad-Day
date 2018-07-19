@@ -7,6 +7,7 @@ public class DamageEnemyOnContact : MonoBehaviour
 {
     [Header("Damage Stats")]
     public float damageConstant = 0.7f;
+    public float minCollisionVelocity = 20;
 
     [Header("Health")]
     public Slider healthSlider;
@@ -48,6 +49,9 @@ public class DamageEnemyOnContact : MonoBehaviour
         if (otherTag == "Player")
         {
             float collisionVelocity = other.relativeVelocity.magnitude;
+            if (collisionVelocity < minCollisionVelocity)
+                return;
+
             float damageAmount = collisionVelocity * damageConstant;
             EnemyStats.health -= damageAmount;
         }

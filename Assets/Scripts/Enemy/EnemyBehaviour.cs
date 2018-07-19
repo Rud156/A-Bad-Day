@@ -24,6 +24,9 @@ public class EnemyBehaviour : MonoBehaviour
     public Text displaySmallText;
     public Text displayBigText;
 
+    [Header("Fader")]
+    public GameObject fadeOut;
+
     private int timeBetweenEffects;
     private JumpOnPlayer jumpOnPlayer;
     private Rigidbody target;
@@ -89,6 +92,18 @@ public class EnemyBehaviour : MonoBehaviour
             displaySmallText.text = "Enemy defeated";
             textHolderAnimator.Play(UITextConstants.screenTextAnimationName);
 
+            int currentScore = SecondScene.collectibleScore;
+            int currentSavedScore;
+
+            if (PlayerPrefs.HasKey(UITextConstants.playerPrefsString))
+                currentSavedScore = PlayerPrefs.GetInt(UITextConstants.playerPrefsString);
+            else
+                currentSavedScore = 0;
+            if (currentScore > currentSavedScore)
+                PlayerPrefs.SetInt(UITextConstants.playerPrefsString, currentScore);
+
+
+            fadeOut.SetActive(true);
             Destroy(gameObject);
         }
     }
