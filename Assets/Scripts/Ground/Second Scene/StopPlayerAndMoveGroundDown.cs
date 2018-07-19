@@ -13,6 +13,10 @@ public class StopPlayerAndMoveGroundDown : MonoBehaviour
     public float movementAmount;
     public bool isPositive = false;
     public bool activateOnStart = false;
+    public bool deactivateObjectOnEnd = true;
+
+    [Header("Optional Stats")]
+    public bool unParentPlayer = false;
 
     private bool stopMovement;
     private List<float> endYPosition;
@@ -73,7 +77,8 @@ public class StopPlayerAndMoveGroundDown : MonoBehaviour
         {
             stopMovement = true;
             Core.stopPlayerMovement = false;
-            gameObject.SetActive(false);
+            if (deactivateObjectOnEnd)
+                gameObject.SetActive(false);
         }
     }
 
@@ -87,6 +92,8 @@ public class StopPlayerAndMoveGroundDown : MonoBehaviour
         if (!target || !other.CompareTag("Player"))
             return;
 
+        if (unParentPlayer)
+            other.transform.SetParent(null);
 
         stopMovement = false;
         Core.stopPlayerMovement = true;

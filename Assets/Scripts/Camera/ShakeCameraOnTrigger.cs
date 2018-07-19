@@ -11,6 +11,9 @@ public class ShakeCameraOnTrigger : MonoBehaviour
     public float fadeInTime = 0.1f;
     public float fadeOutTime = 2;
 
+    [Header("Deactivate Object")]
+    public bool deactivateObjectOnEnd = true;
+
     public delegate void OnCameraShakeEnd();
     public OnCameraShakeEnd onCameraShakeEndCallback;
 
@@ -29,6 +32,7 @@ public class ShakeCameraOnTrigger : MonoBehaviour
         if (onCameraShakeEndCallback != null)
             onCameraShakeEndCallback.Invoke();
 
-        gameObject.SetActive(false);
+        if (deactivateObjectOnEnd)
+            gameObject.SetActive(false);
     }
 }

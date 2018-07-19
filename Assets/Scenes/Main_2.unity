@@ -271,6 +271,8 @@ MonoBehaviour:
   movementAmount: 1000
   isPositive: 0
   activateOnStart: 1
+  deactivateObjectOnEnd: 1
+  unParentPlayer: 0
 --- !u!1001 &26842609
 Prefab:
   m_ObjectHideFlags: 0
@@ -2461,8 +2463,8 @@ GameObject:
   - component: {fileID: 178238738}
   - component: {fileID: 178238739}
   - component: {fileID: 178238743}
-  - component: {fileID: 178238742}
   - component: {fileID: 178238744}
+  - component: {fileID: 178238742}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -2593,7 +2595,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 2
 --- !u!114 &178238735
 MonoBehaviour:
@@ -2647,6 +2649,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab94b1d337521c6478620a1d8c8deab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textHolderAnimator: {fileID: 582623616}
+  displaySmallText: {fileID: 338298191}
+  displayBigText: {fileID: 215359445}
+  fadeOut: {fileID: 330473586}
   resetPosition: {x: -71.95, y: 1.25, z: 0.04}
   useCheckPoint: 1
 --- !u!114 &178238739
@@ -4417,6 +4423,8 @@ MonoBehaviour:
   movementAmount: 1000
   isPositive: 0
   activateOnStart: 1
+  deactivateObjectOnEnd: 1
+  unParentPlayer: 0
 --- !u!1 &330473586
 GameObject:
   m_ObjectHideFlags: 0
@@ -6545,6 +6553,34 @@ MonoBehaviour:
   fadeInTime: 0.5
   fadeOutTime: 3
   totalShakeTime: 0.5
+--- !u!1 &537296964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 537296965}
+  m_Layer: 0
+  m_Name: Temp Player Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &537296965
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 537296964}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.70710677}
+  m_LocalPosition: {x: -71.95, y: 1.25, z: 0.04}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
 --- !u!1 &543651959
 GameObject:
   m_ObjectHideFlags: 0
@@ -7045,7 +7081,6 @@ GameObject:
   - component: {fileID: 570667292}
   - component: {fileID: 570667291}
   - component: {fileID: 570667290}
-  - component: {fileID: 570667293}
   m_Layer: 0
   m_Name: CheckPoint
   m_TagString: Untagged
@@ -7074,12 +7109,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 570667288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 834664988b19057408307f221b61de0c, type: 3}
+  m_Script: {fileID: 11500000, guid: cf52d6ededcb6894bbe48f8595e03a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 178238726}
   director: {fileID: 1589304128}
   deactivateObjectAfterComplete: 1
+  dialogueStarter: {fileID: 134397677}
 --- !u!114 &570667291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7104,18 +7140,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &570667293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 570667288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d63be67e3b6785e40a58bf28eca26888, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameObjectToActivate: {fileID: 134397677}
 --- !u!1001 &576143332
 Prefab:
   m_ObjectHideFlags: 0
@@ -8423,6 +8447,8 @@ MonoBehaviour:
   movementAmount: 50
   isPositive: 0
   activateOnStart: 0
+  deactivateObjectOnEnd: 1
+  unParentPlayer: 0
 --- !u!65 &679531743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14048,6 +14074,7 @@ MonoBehaviour:
   roughness: 7
   fadeInTime: 0.1
   fadeOutTime: 7
+  deactivateObjectOnEnd: 1
 --- !u!65 &929201422
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19218,6 +19245,8 @@ MonoBehaviour:
   movementAmount: 5
   isPositive: 0
   activateOnStart: 0
+  deactivateObjectOnEnd: 1
+  unParentPlayer: 0
 --- !u!65 &1099390087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23052,9 +23081,11 @@ MonoBehaviour:
   grounds:
   - {fileID: 1377939897}
   movementSpeed: 20
-  movementAmount: 20
+  movementAmount: 7
   isPositive: 0
   activateOnStart: 0
+  deactivateObjectOnEnd: 1
+  unParentPlayer: 1
 --- !u!114 &1147438371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23067,9 +23098,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magnitude: 4
-  roughness: 7
+  roughness: 5
   fadeInTime: 0.1
   fadeOutTime: 7
+  deactivateObjectOnEnd: 0
 --- !u!1001 &1157581325
 Prefab:
   m_ObjectHideFlags: 0
@@ -23562,6 +23594,7 @@ MonoBehaviour:
   roughness: 7
   fadeInTime: 0.1
   fadeOutTime: 5
+  deactivateObjectOnEnd: 1
 --- !u!65 &1188909429
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25542,6 +25575,8 @@ MonoBehaviour:
   movementAmount: 1000
   isPositive: 0
   activateOnStart: 1
+  deactivateObjectOnEnd: 1
+  unParentPlayer: 0
 --- !u!1001 &1352383635
 Prefab:
   m_ObjectHideFlags: 0
@@ -26826,6 +26861,7 @@ MonoBehaviour:
   roughness: 7
   fadeInTime: 0.1
   fadeOutTime: 1
+  deactivateObjectOnEnd: 1
 --- !u!65 &1467755267
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28542,6 +28578,8 @@ MonoBehaviour:
   movementAmount: 5
   isPositive: 0
   activateOnStart: 0
+  deactivateObjectOnEnd: 1
+  unParentPlayer: 0
 --- !u!65 &1673376398
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31339,6 +31377,8 @@ MonoBehaviour:
   movementAmount: 1000
   isPositive: 0
   activateOnStart: 1
+  deactivateObjectOnEnd: 1
+  unParentPlayer: 0
 --- !u!1001 &2042275933
 Prefab:
   m_ObjectHideFlags: 0

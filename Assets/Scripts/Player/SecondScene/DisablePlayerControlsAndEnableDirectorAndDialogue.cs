@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class DisablePlayerControlsAndEnableDirector : MonoBehaviour
+public class DisablePlayerControlsAndEnableDirectorAndDialogue : MonoBehaviour
 {
 
+    [Header("Director Object")]
     public GameObject player;
     public PlayableDirector director;
     public bool deactivateObjectAfterComplete = true;
+
+    [Header("Dialogue Component")]
+    public GameObject dialogueStarter;
 
     private bool playStarted;
     private Rigidbody target;
@@ -35,6 +39,7 @@ public class DisablePlayerControlsAndEnableDirector : MonoBehaviour
             target.isKinematic = true;
             director.Play();
             playStarted = true;
+            dialogueStarter.SetActive(true);
         }
 
         if (director.state != PlayState.Playing && playStarted)
