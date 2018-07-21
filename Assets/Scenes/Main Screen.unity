@@ -1110,7 +1110,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: One Day
+  m_Text: A Bad Day
 --- !u!222 &1723570910
 CanvasRenderer:
   m_ObjectHideFlags: 0
