@@ -4,4 +4,4 @@
 
 
 ## Releases:
-Download from https://github.com/Rud156/OneDay/blob/master/Release/OneDay.zip
+Download from https://github.com/Rud156/A-Bad-Day/blob/master/Release/OneDay.zip
